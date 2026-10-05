@@ -1,0 +1,2146 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Balaji Embroidery | Handcrafted Textile Art & Bespoke Custom Studio</title>
+  <meta name="description" content="Balaji Embroidery - Atelier of handcrafted embroidery art, ready-to-ship heirlooms, and bespoke mail-in custom embroidery service based in Haryana, India." />
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            linen: {
+              50: '#FDFBF7',
+              100: '#FAF6EE',
+              200: '#F4ECE0',
+              300: '#EBDDCB',
+              400: '#DAC2A6',
+              800: '#4A3B2C',
+              900: '#2A1F16'
+            },
+            terracotta: {
+              500: '#C05C46',
+              600: '#A94833',
+              700: '#8C3826'
+            },
+            antique: {
+              gold: '#C59B27',
+              goldLight: '#E8C86A',
+              charcoal: '#1C1917',
+              sage: '#445D48'
+            }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Custom Craft & Stitch Aesthetics */
+    .stitch-border {
+      border: 2px dashed #D6C7B2;
+    }
+    .stitch-border-gold {
+      border: 2px dashed #C59B27;
+    }
+    .textile-texture {
+      background-color: #FAF6EE;
+      background-image: radial-gradient(#E8DEC8 0.75px, transparent 0.75px);
+      background-size: 16px 16px;
+    }
+    .embroidery-shadow {
+      box-shadow: 0 10px 30px -5px rgba(42, 31, 22, 0.08), 0 4px 6px -2px rgba(42, 31, 22, 0.04);
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #F4ECE0;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #C05C46;
+      border-radius: 3px;
+    }
+    @keyframes threadGlow {
+      0%, 100% { opacity: 0.7; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.04); }
+    }
+    .thread-pulse {
+      animation: threadGlow 4s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body class="font-sans text-stone-800 bg-linen-50 antialiased selection:bg-terracotta-500 selection:text-white">
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="bg-linen-900 text-linen-200 text-xs sm:text-sm py-2 px-4 border-b border-stone-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-center gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-antique-gold animate-ping"></span>
+        <span><strong>Studio Notice:</strong> Free Doorstep Reverse Pickup Across India on Custom Orders over ₹1,499</span>
+      </div>
+      <div class="flex items-center gap-4 text-xs tracking-wider uppercase font-medium">
+        <span><i data-lucide="map-pin" class="w-3.5 h-3.5 inline mr-1 text-antique-gold"></i> Haryana Workshop</span>
+        <span class="text-stone-500">|</span>
+        <button onclick="toggleCurrency()" id="currencyBtn" class="hover:text-antique-gold flex items-center gap-1 transition">
+          <i data-lucide="globe" class="w-3.5 h-3.5"></i> <span id="currentCurrencyLabel">INR (₹)</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-linen-200 shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Mobile Menu Trigger -->
+        <button onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-md text-stone-700 hover:text-terracotta-500 transition">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+
+        <!-- Brand Logo -->
+        <a href="#hero" class="flex items-center gap-3 group">
+          <div class="w-11 h-11 rounded-full bg-linen-100 stitch-border-gold flex items-center justify-center text-terracotta-500 group-hover:rotate-12 transition-transform duration-300">
+            <!-- Custom Needle & Spool SVG Icon -->
+            <svg class="w-6 h-6 text-terracotta-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+            </svg>
+          </div>
+          <div>
+            <span class="font-serif text-2xl sm:text-3xl tracking-wide font-bold text-stone-900 block leading-none">
+              BALAJI <span class="text-terracotta-500 font-light italic">EMBROIDERY</span>
+            </span>
+            <span class="text-[10px] tracking-[0.25em] uppercase text-stone-500 block mt-1 font-medium">
+              Atelier of Handcrafted Stitches • Haryana
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-8 text-sm font-medium tracking-wide">
+          <a href="#catalog" class="text-stone-700 hover:text-terracotta-500 transition">Ready-Made Art</a>
+          <a href="#custom-service" class="text-stone-700 hover:text-terracotta-500 transition flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-terracotta-500"></span>
+            Send Your Garment
+          </a>
+          <a href="#visualizer" class="text-stone-700 hover:text-terracotta-500 transition">Live Visualizer</a>
+          <a href="#tracker" class="text-stone-700 hover:text-terracotta-500 transition">Track Parcel</a>
+          <a href="#heritage" class="text-stone-700 hover:text-terracotta-500 transition">Our Craft</a>
+          <a href="#faqs" class="text-stone-700 hover:text-terracotta-500 transition">FAQs & Contact</a>
+        </nav>
+
+        <!-- Right Utility Actions -->
+        <div class="flex items-center gap-3 sm:gap-4">
+          <!-- Search trigger -->
+          <button onclick="toggleSearchModal()" class="p-2 text-stone-600 hover:text-terracotta-500 transition rounded-full hover:bg-linen-100">
+            <i data-lucide="search" class="w-5 h-5"></i>
+          </button>
+
+          <!-- Track Order Shortcut -->
+          <a href="#tracker" class="hidden sm:flex items-center gap-1.5 text-xs uppercase tracking-wider font-semibold px-3 py-1.5 rounded-full border border-linen-300 hover:border-terracotta-500 text-stone-700 hover:text-terracotta-500 transition">
+            <i data-lucide="package-search" class="w-3.5 h-3.5"></i> Track
+          </a>
+
+          <!-- Cart Drawer Button -->
+          <button onclick="toggleCartDrawer()" class="relative p-2.5 rounded-full bg-linen-100 text-stone-900 hover:bg-terracotta-500 hover:text-white transition-all duration-200">
+            <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+            <span id="cartCountBadge" class="absolute -top-1 -right-1 bg-terracotta-500 text-white text-[11px] font-bold w-5 h-5 rounded-full flex items-center justify-center border-2 border-white">
+              0
+            </span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-linen-50 border-b border-linen-200 px-6 py-6 transition-all duration-300">
+      <nav class="flex flex-col gap-4 text-base font-medium">
+        <a href="#catalog" onclick="toggleMobileMenu()" class="text-stone-800 hover:text-terracotta-500 py-1 border-b border-linen-200">Ready-Made Art Catalog</a>
+        <a href="#custom-service" onclick="toggleMobileMenu()" class="text-terracotta-600 font-semibold py-1 border-b border-linen-200 flex items-center justify-between">
+          <span>Send Your Garment for Embroidery</span>
+          <span class="text-xs bg-terracotta-100 text-terracotta-700 px-2 py-0.5 rounded-full">Mail-in</span>
+        </a>
+        <a href="#visualizer" onclick="toggleMobileMenu()" class="text-stone-800 hover:text-terracotta-500 py-1 border-b border-linen-200">Live Garment Visualizer</a>
+        <a href="#tracker" onclick="toggleMobileMenu()" class="text-stone-800 hover:text-terracotta-500 py-1 border-b border-linen-200">Track Order / Mail-in Parcel</a>
+        <a href="#heritage" onclick="toggleMobileMenu()" class="text-stone-800 hover:text-terracotta-500 py-1 border-b border-linen-200">Haryana Artisan Heritage</a>
+        <a href="#faqs" onclick="toggleMobileMenu()" class="text-stone-800 hover:text-terracotta-500 py-1">FAQs & Studio Address</a>
+      </nav>
+      <div class="mt-6 pt-4 border-t border-linen-200 flex justify-between items-center text-sm">
+        <span class="text-stone-600">Currency</span>
+        <button onclick="toggleCurrency()" class="px-3 py-1 bg-white border border-linen-300 rounded font-semibold text-terracotta-600">
+          Switch to <span id="mobileCurrencyToggleLabel">USD ($)</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="hero" class="relative overflow-hidden textile-texture py-16 sm:py-24 border-b border-linen-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Hero Copy -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 border border-linen-300 text-xs tracking-wider uppercase font-semibold text-stone-700 shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-antique-gold"></span>
+            Haryana Studio & Atelier • Pan-India Reverse Courier
+          </div>
+          
+          <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-stone-900 leading-[1.08]">
+            Where Sacred Threads Meet <span class="italic text-terracotta-500 underline decoration-antique-gold/40 decoration-wavy">Modern Couture</span>.
+          </h1>
+
+          <p class="text-stone-600 text-lg sm:text-xl max-w-2xl font-light leading-relaxed">
+            From framed fine-art textile hoops to bespoke embellishments on your own jackets, sarees, and kurtas. Experience genuine hand-stitch artistry, zardozi, and needle-painting crafted in Haryana, India.
+          </p>
+
+          <!-- Dual Hero Action Buttons -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+            <a href="#custom-service" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-terracotta-500 hover:bg-terracotta-600 text-white font-medium text-base shadow-lg shadow-terracotta-500/25 transition-all duration-300 flex items-center justify-center gap-3 group">
+              <i data-lucide="sparkles" class="w-5 h-5 text-antique-goldLight group-hover:rotate-45 transition-transform"></i>
+              <span>Send Your Garment to Us</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+            </a>
+
+            <a href="#catalog" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white hover:bg-linen-100 text-stone-900 border border-linen-400 font-medium text-base shadow-sm transition-all duration-300 flex items-center justify-center gap-2">
+              <i data-lucide="shopping-bag" class="w-5 h-5 text-stone-600"></i>
+              <span>Shop Ready-Made Collection</span>
+            </a>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t border-linen-300/80 text-left">
+            <div>
+              <div class="font-serif text-2xl font-bold text-stone-900">100%</div>
+              <div class="text-xs text-stone-500 font-medium uppercase tracking-wider">Hand-Stitched</div>
+            </div>
+            <div>
+              <div class="font-serif text-2xl font-bold text-stone-900">Doorstep</div>
+              <div class="text-xs text-stone-500 font-medium uppercase tracking-wider">Reverse Pickup</div>
+            </div>
+            <div>
+              <div class="font-serif text-2xl font-bold text-stone-900">7–10 Days</div>
+              <div class="text-xs text-stone-500 font-medium uppercase tracking-wider">Turnaround</div>
+            </div>
+            <div>
+              <div class="font-serif text-2xl font-bold text-stone-900">Azo-Free</div>
+              <div class="text-xs text-stone-500 font-medium uppercase tracking-wider">Pure Silk Floss</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Visual Showcase -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            <!-- Decorative Badge -->
+            <div class="absolute -top-4 -left-4 z-20 bg-antique-gold text-stone-950 font-serif font-bold text-xs uppercase px-4 py-2 rounded-full shadow-md tracking-wider flex items-center gap-1.5">
+              <i data-lucide="award" class="w-4 h-4"></i> Master Craftsmen of Haryana
+            </div>
+
+            <!-- Main Feature Showcase Card -->
+            <div class="bg-white p-4 rounded-3xl shadow-2xl border border-linen-300 stitch-border relative overflow-hidden">
+              <div class="relative rounded-2xl overflow-hidden aspect-[4/5] bg-linen-200 group">
+                <!-- High Quality Textile Artwork Simulation -->
+                <img src="https://images.unsplash.com/photo-1607344645866-009c320c5ab8?q=80&w=1000&auto=format&fit=crop" 
+                     alt="Balaji Masterwork Embroidery" 
+                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                
+                <!-- Overlay gradient -->
+                <div class="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-transparent"></div>
+
+                <!-- Floating Interactive Sticker -->
+                <div class="absolute bottom-6 left-6 right-6 text-white">
+                  <span class="inline-block px-2.5 py-1 bg-terracotta-500/90 text-[11px] font-semibold tracking-wider uppercase rounded-md mb-2">
+                    Customer Spotlight
+                  </span>
+                  <h3 class="font-serif text-2xl font-bold">Vintage Levi’s Jacket with Royal Peacock Zardozi</h3>
+                  <p class="text-xs text-stone-300 mt-1">Shipped from Mumbai to our Haryana studio. Over 18,000 silk stitches & bullion wire.</p>
+                  
+                  <div class="mt-3 flex items-center justify-between pt-3 border-t border-white/20 text-xs">
+                    <span class="text-antique-gold font-medium">Mail-in Commission #BE-9021</span>
+                    <a href="#custom-service" class="underline hover:text-antique-gold flex items-center gap-1">Customize Yours &rarr;</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Trust Pill -->
+            <div class="absolute -bottom-6 -right-4 bg-white p-3.5 rounded-2xl shadow-xl border border-linen-300 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center">
+                <i data-lucide="shield-check" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <div class="text-xs font-bold text-stone-900">Safe Parcel Guarantee</div>
+                <div class="text-[11px] text-stone-500">Insured studio intake & return</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TWO-TRACK HYBRID MODEL EXPLAINER -->
+  <section class="py-16 bg-white border-b border-linen-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-xs uppercase tracking-[0.25em] font-bold text-terracotta-500">How Balaji Embroidery Works</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stone-900 mt-2">
+          Two Distinct Ways to Experience Our Craft
+        </h2>
+        <p class="text-stone-600 mt-3 text-sm sm:text-base">
+          Whether you want an instant ready-to-hang heirloom or wish to breathe bespoke artisanal life into your own beloved wardrobe, we make the process effortless.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Pillar 1: Ready-to-Ship Art -->
+        <div class="relative bg-linen-100 rounded-3xl p-8 sm:p-10 border border-linen-300 hover:border-terracotta-500/50 transition-all duration-300 group">
+          <div class="w-14 h-14 rounded-2xl bg-white text-terracotta-500 flex items-center justify-center shadow-md mb-6">
+            <i data-lucide="palette" class="w-7 h-7"></i>
+          </div>
+          <span class="text-xs font-bold uppercase tracking-wider text-antique-gold">Track 01 • Immediate Dispatch</span>
+          <h3 class="font-serif text-2xl sm:text-3xl font-bold text-stone-900 mt-2">Ready-to-Ship Art & Apparel</h3>
+          <p class="text-stone-600 mt-3 text-sm leading-relaxed">
+            Curated hoop artworks, framed heritage tapestries, ready embroidered tote bags, and finished apparel created by our in-house artisans. Ready to package and dispatch within 24 hours.
+          </p>
+          <ul class="mt-6 space-y-2.5 text-xs text-stone-700 font-medium">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Signed & numbered archival certificates</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Solid teakwood hoops & museum glass framing</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Express pan-India & global delivery</li>
+          </ul>
+          <div class="mt-8">
+            <a href="#catalog" class="inline-flex items-center gap-2 text-sm font-semibold text-terracotta-600 group-hover:text-terracotta-700 underline underline-offset-4">
+              Explore Available Artworks <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Pillar 2: Send Your Garment -->
+        <div class="relative bg-linen-900 text-white rounded-3xl p-8 sm:p-10 border border-stone-800 hover:border-antique-gold/50 transition-all duration-300 group shadow-xl">
+          <div class="w-14 h-14 rounded-2xl bg-terracotta-500 text-white flex items-center justify-center shadow-md mb-6">
+            <i data-lucide="send" class="w-7 h-7"></i>
+          </div>
+          <span class="text-xs font-bold uppercase tracking-wider text-antique-gold">Track 02 • Bespoke Mail-in</span>
+          <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white mt-2">Send Your Garment to Our Studio</h3>
+          <p class="text-stone-300 mt-3 text-sm leading-relaxed">
+            Own a denim jacket, plain saree, vintage kurta, or tote bag that needs character? Book online, print our prepaid packing slip or schedule reverse courier pickup, and let our Haryana artisans embellish it.
+          </p>
+          <ul class="mt-6 space-y-2.5 text-xs text-stone-300 font-medium">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-antique-gold"></i> Doorstep courier pickup across 19,000+ PIN codes</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-antique-gold"></i> Real-time milestone tracking from receipt to dispatch</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-antique-gold"></i> Live design preview & consultation with master artisan</li>
+          </ul>
+          <div class="mt-8">
+            <a href="#custom-service" class="inline-flex items-center gap-2 text-sm font-semibold text-antique-gold hover:text-antique-goldLight underline underline-offset-4">
+              Configure & Send Garment <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- READY-TO-SHIP PRODUCT CATALOG -->
+  <section id="catalog" class="py-20 bg-linen-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Title & Filter Tabs -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+        <div>
+          <span class="text-xs uppercase tracking-[0.25em] font-bold text-terracotta-500">Immediate Delivery</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stone-900 mt-1">Ready-Made Art & Heirlooms</h2>
+          <p class="text-stone-600 text-sm mt-1">Meticulously handcrafted in limited runs. Ready to dispatch within 24 hours.</p>
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div class="flex flex-wrap gap-2 text-xs font-semibold" id="categoryFilterContainer">
+          <button onclick="filterProducts('all')" class="cat-filter-btn px-4 py-2 rounded-full bg-stone-900 text-white transition" data-cat="all">All Items</button>
+          <button onclick="filterProducts('hoop')" class="cat-filter-btn px-4 py-2 rounded-full bg-white text-stone-700 hover:bg-linen-200 border border-linen-300 transition" data-cat="hoop">Hoop & Wall Art</button>
+          <button onclick="filterProducts('apparel')" class="cat-filter-btn px-4 py-2 rounded-full bg-white text-stone-700 hover:bg-linen-200 border border-linen-300 transition" data-cat="apparel">Embroidered Apparel</button>
+          <button onclick="filterProducts('saree')" class="cat-filter-btn px-4 py-2 rounded-full bg-white text-stone-700 hover:bg-linen-200 border border-linen-300 transition" data-cat="saree">Sarees & Dupattas</button>
+          <button onclick="filterProducts('accessories')" class="cat-filter-btn px-4 py-2 rounded-full bg-white text-stone-700 hover:bg-linen-200 border border-linen-300 transition" data-cat="accessories">Totes & Pouches</button>
+        </div>
+      </div>
+
+      <!-- Product Cards Grid -->
+      <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7">
+        <!-- Products will be dynamically populated by JS -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- "SEND YOUR ARTICLE" INTERACTIVE CONFIGURATOR (TRACK 2) -->
+  <section id="custom-service" class="py-20 bg-white border-t border-b border-linen-200 relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-terracotta-100 text-terracotta-700 text-xs font-bold uppercase tracking-wider mb-3">
+          <i data-lucide="wand-2" class="w-3.5 h-3.5"></i> Custom Mail-In Atelier
+        </span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-stone-900">
+          Send Your Article for Embroidery
+        </h2>
+        <p class="text-stone-600 mt-3 text-base sm:text-lg">
+          Select your garment, pick your embroidery placement, choose a motif or upload custom artwork, and schedule courier pickup or ship directly to our Haryana studio.
+        </p>
+      </div>
+
+      <!-- Configurator Wizard Card -->
+      <div class="bg-linen-50 rounded-3xl p-6 sm:p-10 border border-linen-300 stitch-border shadow-xl">
+        
+        <!-- Step Navigation Progress Bar -->
+        <div class="grid grid-cols-4 gap-2 mb-10 pb-6 border-b border-linen-300">
+          <div id="stepIndicator1" class="text-center border-b-4 border-terracotta-500 pb-2">
+            <span class="text-xs font-bold text-terracotta-600 block">STEP 01</span>
+            <span class="text-xs sm:text-sm font-medium text-stone-900 hidden sm:inline">Garment Type</span>
+          </div>
+          <div id="stepIndicator2" class="text-center border-b-4 border-linen-300 pb-2">
+            <span class="text-xs font-bold text-stone-400 block">STEP 02</span>
+            <span class="text-xs sm:text-sm font-medium text-stone-600 hidden sm:inline">Placement & Tier</span>
+          </div>
+          <div id="stepIndicator3" class="text-center border-b-4 border-linen-300 pb-2">
+            <span class="text-xs font-bold text-stone-400 block">STEP 03</span>
+            <span class="text-xs sm:text-sm font-medium text-stone-600 hidden sm:inline">Motif & Artwork</span>
+          </div>
+          <div id="stepIndicator4" class="text-center border-b-4 border-linen-300 pb-2">
+            <span class="text-xs font-bold text-stone-400 block">STEP 04</span>
+            <span class="text-xs sm:text-sm font-medium text-stone-600 hidden sm:inline">Logistics & Intake</span>
+          </div>
+        </div>
+
+        <!-- FORM CONTENT CONTAINER -->
+        <div id="wizardContainer">
+          
+          <!-- STEP 1: GARMENT SELECTION -->
+          <div id="wizardStep1" class="wizard-step space-y-6">
+            <h3 class="font-serif text-2xl font-bold text-stone-900">What article will you be sending to our studio?</h3>
+            <p class="text-sm text-stone-600">Select the garment or item. Our needlecraft masters will calibrate thread tension and backing fabric to suit its specific weave.</p>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4" id="garmentOptionsGrid">
+              <!-- Option: Denim Jacket -->
+              <div onclick="selectGarment('Denim Jacket / Trucker', 0, 'Heavy cotton/denim weave suitable for dense embroidery')" class="garment-card cursor-pointer p-4 sm:p-5 rounded-2xl bg-white border-2 border-linen-300 hover:border-terracotta-500 transition-all text-center group selected-garment">
+                <div class="w-12 h-12 mx-auto rounded-full bg-linen-100 flex items-center justify-center text-stone-700 group-hover:text-terracotta-600 mb-3">
+                  <i data-lucide="shirt" class="w-6 h-6"></i>
+                </div>
+                <div class="font-bold text-stone-900 text-sm">Denim Jacket / Coat</div>
+                <div class="text-[11px] text-stone-500 mt-1">Backpieces, collars, chest pockets</div>
+              </div>
+
+              <!-- Option: Kurta / Shirt -->
+              <div onclick="selectGarment('Kurta / Formal Shirt', 0, 'Fine cotton, silk, or linen fabric')" class="garment-card cursor-pointer p-4 sm:p-5 rounded-2xl bg-white border-2 border-linen-300 hover:border-terracotta-500 transition-all text-center group">
+                <div class="w-12 h-12 mx-auto rounded-full bg-linen-100 flex items-center justify-center text-stone-700 group-hover:text-terracotta-600 mb-3">
+                  <i data-lucide="sparkles" class="w-6 h-6"></i>
+                </div>
+                <div class="font-bold text-stone-900 text-sm">Kurta / Linen Shirt</div>
+                <div class="text-[11px] text-stone-500 mt-1">Placket, yoke, cuffs & pockets</div>
+              </div>
+
+              <!-- Option: Saree / Dupatta -->
+              <div onclick="selectGarment('Saree / Dupatta / Shawl', 200, 'Delicate chiffon, organza, georgette, or silk')" class="garment-card cursor-pointer p-4 sm:p-5 rounded-2xl bg-white border-2 border-linen-300 hover:border-terracotta-500 transition-all text-center group">
+                <div class="w-12 h-12 mx-auto rounded-full bg-linen-100 flex items-center justify-center text-stone-700 group-hover:text-terracotta-600 mb-3">
+                  <i data-lucide="layers" class="w-6 h-6"></i>
+                </div>
+                <div class="font-bold text-stone-900 text-sm">Saree / Dupatta / Shawl</div>
+                <div class="text-[11px] text-stone-500 mt-1">Pallu motifs, border embroidery</div>
+              </div>
+
+              <!-- Option: Canvas Tote -->
+              <div onclick="selectGarment('Canvas Tote / Bag', -100, 'Heavy canvas or cotton duck fabric')" class="garment-card cursor-pointer p-4 sm:p-5 rounded-2xl bg-white border-2 border-linen-300 hover:border-terracotta-500 transition-all text-center group">
+                <div class="w-12 h-12 mx-auto rounded-full bg-linen-100 flex items-center justify-center text-stone-700 group-hover:text-terracotta-600 mb-3">
+                  <i data-lucide="shopping-bag" class="w-6 h-6"></i>
+                </div>
+                <div class="font-bold text-stone-900 text-sm">Canvas Tote / Duffel</div>
+                <div class="text-[11px] text-stone-500 mt-1">Front center, pocket embellishment</div>
+              </div>
+
+              <!-- Option: Cap / Beanie / Hat -->
+              <div onclick="selectGarment('Cap / Hat / Accessory', -200, 'Structured cotton twill or wool')" class="garment-card cursor-pointer p-4 sm:p-5 rounded-2xl bg-white border-2 border-linen-300 hover:border-terracotta-500 transition-all text-center group">
+                <div class="w-12 h-12 mx-auto rounded-full bg-linen-100 flex items-center justify-center text-stone-700 group-hover:text-terracotta-600 mb-3">
+                  <i data-lucide="smile" class="w-6 h-6"></i>
+                </div>
+                <div class="font-bold text-stone-900 text-sm">Cap / Hat / Belt</div>
+                <div class="text-[11px] text-stone-500 mt-1">Crown logos, visor or side accents</div>
+              </div>
+
+              <!-- Option: Custom Fabric / Other -->
+              <div onclick="selectGarment('Bespoke Garment / Other', 100, 'Custom fabric specified in intake notes')" class="garment-card cursor-pointer p-4 sm:p-5 rounded-2xl bg-white border-2 border-linen-300 hover:border-terracotta-500 transition-all text-center group">
+                <div class="w-12 h-12 mx-auto rounded-full bg-linen-100 flex items-center justify-center text-stone-700 group-hover:text-terracotta-600 mb-3">
+                  <i data-lucide="help-circle" class="w-6 h-6"></i>
+                </div>
+                <div class="font-bold text-stone-900 text-sm">Other / Vintage Textile</div>
+                <div class="text-[11px] text-stone-500 mt-1">Cushions, tapestries, repairs</div>
+              </div>
+            </div>
+
+            <!-- Notes on garment condition -->
+            <div class="bg-white p-4 rounded-xl border border-linen-300 text-xs text-stone-600 flex items-start gap-3">
+              <i data-lucide="info" class="w-5 h-5 text-terracotta-500 flex-shrink-0 mt-0.5"></i>
+              <span><strong>Garment Requirements:</strong> Please ensure your article is freshly laundered before sending. We can also embroider over small tears or stains as creative repair art (visible mending).</span>
+            </div>
+
+            <div class="flex justify-end pt-4">
+              <button onclick="goToStep(2)" class="px-7 py-3 rounded-xl bg-stone-900 hover:bg-terracotta-500 text-white font-semibold text-sm transition flex items-center gap-2">
+                Continue to Placement & Tier <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- STEP 2: PLACEMENT & STITCH TIER -->
+          <div id="wizardStep2" class="wizard-step space-y-6 hidden">
+            <h3 class="font-serif text-2xl font-bold text-stone-900">Select Embroidery Placement & Complexity</h3>
+            <p class="text-sm text-stone-600">Choose where the embroidery should be situated on your garment and the level of handcraft intensity.</p>
+
+            <!-- Placement Options -->
+            <div class="space-y-3">
+              <label class="block text-xs font-bold uppercase tracking-wider text-stone-700">Placement Area</label>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3" id="placementOptionsGrid">
+                
+                <div onclick="selectPlacement('Left Chest / Pocket Accent', 799, 'Up to 3.5 x 3.5 inches')" class="placement-card cursor-pointer p-4 rounded-xl bg-white border-2 border-linen-300 hover:border-terracotta-500 transition selected-placement">
+                  <div class="flex justify-between items-start">
+                    <span class="font-bold text-sm text-stone-900">Chest / Pocket</span>
+                    <span class="text-xs font-semibold text-terracotta-600 font-mono price-tag" data-base-inr="799">₹799</span>
+                  </div>
+                  <div class="text-xs text-stone-500 mt-1">Subtle crests, florals, monograms (up to 3.5")</div>
+                </div>
+
+                <div onclick="selectPlacement('Collar & Cuffs Pair', 1199, 'Dual accent stitching on cuffs or collar points')" class="placement-card cursor-pointer p-4 rounded-xl bg-white border-2 border-linen-300 hover:border-terracotta-500 transition">
+                  <div class="flex justify-between items-start">
+                    <span class="font-bold text-sm text-stone-900">Collar & Cuffs</span>
+                    <span class="text-xs font-semibold text-terracotta-600 font-mono price-tag" data-base-inr="1199">₹1,199</span>
+                  </div>
+                  <div class="text-xs text-stone-500 mt-1">Delicate running vines, geometric borders</div>
+                </div>
+
+                <div onclick="selectPlacement('Center Front / Yoke Motif', 1599, '6 x 6 inches center chest piece')" class="placement-card cursor-pointer p-4 rounded-xl bg-white border-2 border-linen-300 hover:border-terracotta-500 transition">
+                  <div class="flex justify-between items-start">
+                    <span class="font-bold text-sm text-stone-900">Center Front / Yoke</span>
+                    <span class="text-xs font-semibold text-terracotta-600 font-mono price-tag" data-base-inr="1599">₹1,599</span>
+                  </div>
+                  <div class="text-xs text-stone-500 mt-1">Medium focal art, floral sprays, symbols</div>
+                </div>
+
+                <div onclick="selectPlacement('Full Statement Backpiece', 2499, 'Up to 11 x 14 inches large tapestry embroidery')" class="placement-card cursor-pointer p-4 rounded-xl bg-white border-2 border-linen-300 hover:border-terracotta-500 transition">
+                  <div class="flex justify-between items-start">
+                    <span class="font-bold text-sm text-stone-900">Full Backpiece</span>
+                    <span class="text-xs font-semibold text-terracotta-600 font-mono price-tag" data-base-inr="2499">₹2,499</span>
+                  </div>
+                  <div class="text-xs text-stone-500 mt-1">Dramatic jacket back panels, large birds, deities</div>
+                </div>
+
+                <div onclick="selectPlacement('Hemline & Border Run', 2199, 'Running continuous border (up to 2 meters)')" class="placement-card cursor-pointer p-4 rounded-xl bg-white border-2 border-linen-300 hover:border-terracotta-500 transition">
+                  <div class="flex justify-between items-start">
+                    <span class="font-bold text-sm text-stone-900">Border / Hemline</span>
+                    <span class="text-xs font-semibold text-terracotta-600 font-mono price-tag" data-base-inr="2199">₹2,199</span>
+                  </div>
+                  <div class="text-xs text-stone-500 mt-1">Ideal for saree borders, dupatta edges, hemlines</div>
+                </div>
+
+                <div onclick="selectPlacement('Custom Multiple Placements', 3199, 'Combination of back, sleeves, and collar')" class="placement-card cursor-pointer p-4 rounded-xl bg-white border-2 border-linen-300 hover:border-terracotta-500 transition">
+                  <div class="flex justify-between items-start">
+                    <span class="font-bold text-sm text-stone-900">Custom Multi-Zone</span>
+                    <span class="text-xs font-semibold text-terracotta-600 font-mono price-tag" data-base-inr="3199">₹3,199</span>
+                  </div>
+                  <div class="text-xs text-stone-500 mt-1">Complete garment transformation (multiple zones)</div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Thread & Stitch Technique Tier -->
+            <div class="space-y-3 pt-2">
+              <label class="block text-xs font-bold uppercase tracking-wider text-stone-700">Artisanal Stitch & Thread Medium</label>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <label onclick="selectTechnique('Classic Silk Floss (Needle Painting)', 0)" class="technique-card cursor-pointer p-4 rounded-xl bg-white border-2 border-linen-300 hover:border-terracotta-500 transition flex items-start gap-3 selected-technique">
+                  <input type="radio" name="technique" checked class="mt-1 accent-terracotta-500" />
+                  <div>
+                    <span class="font-bold text-sm text-stone-900 block">Classic Silk Floss</span>
+                    <span class="text-xs text-stone-500">Fine thread painting, satin stitch & french knots. No surcharge.</span>
+                  </div>
+                </label>
+
+                <label onclick="selectTechnique('Royal Zardozi (Gold Bullion & Dabka)', 650)" class="technique-card cursor-pointer p-4 rounded-xl bg-white border-2 border-linen-300 hover:border-terracotta-500 transition flex items-start gap-3">
+                  <input type="radio" name="technique" class="mt-1 accent-terracotta-500" />
+                  <div>
+                    <div class="flex items-center gap-1.5">
+                      <span class="font-bold text-sm text-stone-900">Royal Zardozi</span>
+                      <span class="text-[10px] bg-amber-100 text-amber-800 font-bold px-1.5 rounded">+₹650</span>
+                    </div>
+                    <span class="text-xs text-stone-500">Gold/copper wire coil work, pearls, and metallic metallic accents.</span>
+                  </div>
+                </label>
+
+                <label onclick="selectTechnique('Aari Glass Beads & Mirrorwork', 450)" class="technique-card cursor-pointer p-4 rounded-xl bg-white border-2 border-linen-300 hover:border-terracotta-500 transition flex items-start gap-3">
+                  <input type="radio" name="technique" class="mt-1 accent-terracotta-500" />
+                  <div>
+                    <div class="flex items-center gap-1.5">
+                      <span class="font-bold text-sm text-stone-900">Aari & Mirrorwork</span>
+                      <span class="text-[10px] bg-amber-100 text-amber-800 font-bold px-1.5 rounded">+₹450</span>
+                    </div>
+                    <span class="text-xs text-stone-500">Traditional hook tambour needlework with hand-cut mirror embellishments.</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Live Estimated Price Bar -->
+            <div class="bg-linen-200 p-4 rounded-xl flex items-center justify-between">
+              <div>
+                <span class="text-xs text-stone-600 block">Current Service Estimate</span>
+                <span id="wizardPriceEstimate" class="font-serif text-2xl font-bold text-stone-900">₹799</span>
+                <span class="text-[11px] text-stone-500 ml-1">(Includes return shipping)</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <button onclick="goToStep(1)" class="px-4 py-2 text-stone-600 hover:text-stone-900 text-xs font-semibold">Back</button>
+                <button onclick="goToStep(3)" class="px-6 py-2.5 rounded-xl bg-stone-900 hover:bg-terracotta-500 text-white font-semibold text-xs transition flex items-center gap-2">
+                  Continue to Motif & Artwork <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- STEP 3: MOTIF SELECTION OR CUSTOM UPLOAD -->
+          <div id="wizardStep3" class="wizard-step space-y-6 hidden">
+            <h3 class="font-serif text-2xl font-bold text-stone-900">Choose Motif or Upload Your Artwork</h3>
+            <p class="text-sm text-stone-600">Select from our signature Haryana studio flash designs or upload your own reference image, sketch, or custom monogram.</p>
+
+            <!-- Mode Selector Tabs -->
+            <div class="flex border-b border-linen-300 pb-2 gap-4">
+              <button onclick="toggleArtMode('catalog')" id="modeCatalogBtn" class="text-sm font-bold text-terracotta-600 border-b-2 border-terracotta-500 pb-1">
+                Studio Signature Motifs
+              </button>
+              <button onclick="toggleArtMode('upload')" id="modeUploadBtn" class="text-sm font-semibold text-stone-500 hover:text-stone-900 pb-1">
+                Upload Custom Sketch / Image
+              </button>
+            </div>
+
+            <!-- Tab 1: Studio Signature Motifs Catalog -->
+            <div id="catalogMotifsView" class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+              
+              <div onclick="selectMotif('Royal Peacock & Lotus Vine', 'https://images.unsplash.com/photo-1544816155-12df9643f363?w=500&auto=format&fit=crop')" class="motif-card cursor-pointer p-3 bg-white rounded-2xl border-2 border-linen-300 hover:border-terracotta-500 transition selected-motif">
+                <div class="aspect-square rounded-xl overflow-hidden bg-linen-100 mb-2">
+                  <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?w=500&auto=format&fit=crop" class="w-full h-full object-cover" alt="Peacock Motif" />
+                </div>
+                <div class="font-bold text-xs text-stone-900">Royal Peacock & Lotus</div>
+                <div class="text-[10px] text-stone-500">Vibrant indigo, emerald & gold</div>
+              </div>
+
+              <div onclick="selectMotif('Sacred Mandala Geometry', 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=500&auto=format&fit=crop')" class="motif-card cursor-pointer p-3 bg-white rounded-2xl border-2 border-linen-300 hover:border-terracotta-500 transition">
+                <div class="aspect-square rounded-xl overflow-hidden bg-linen-100 mb-2">
+                  <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=500&auto=format&fit=crop" class="w-full h-full object-cover" alt="Mandala" />
+                </div>
+                <div class="font-bold text-xs text-stone-900">Sacred Mandala</div>
+                <div class="text-[10px] text-stone-500">Fine symmetrical geometric needlework</div>
+              </div>
+
+              <div onclick="selectMotif('Blooming Gulmohar Floral', 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?w=500&auto=format&fit=crop')" class="motif-card cursor-pointer p-3 bg-white rounded-2xl border-2 border-linen-300 hover:border-terracotta-500 transition">
+                <div class="aspect-square rounded-xl overflow-hidden bg-linen-100 mb-2">
+                  <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b675?w=500&auto=format&fit=crop" class="w-full h-full object-cover" alt="Floral" />
+                </div>
+                <div class="font-bold text-xs text-stone-900">Blooming Gulmohar</div>
+                <div class="text-[10px] text-stone-500">Terracotta, coral & olive hues</div>
+              </div>
+
+              <div onclick="selectMotif('Vintage Royal Monogram', 'https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?w=500&auto=format&fit=crop')" class="motif-card cursor-pointer p-3 bg-white rounded-2xl border-2 border-linen-300 hover:border-terracotta-500 transition">
+                <div class="aspect-square rounded-xl overflow-hidden bg-linen-100 mb-2">
+                  <img src="https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?w=500&auto=format&fit=crop" class="w-full h-full object-cover" alt="Monogram" />
+                </div>
+                <div class="font-bold text-xs text-stone-900">Personal Monogram</div>
+                <div class="text-[10px] text-stone-500">Custom initials in Victorian / Devanagari</div>
+              </div>
+
+            </div>
+
+            <!-- Tab 2: Custom Upload Form -->
+            <div id="uploadArtworkView" class="hidden space-y-4">
+              <div class="border-2 border-dashed border-linen-300 hover:border-terracotta-500 rounded-2xl p-8 text-center bg-white transition cursor-pointer" onclick="document.getElementById('customFileInput').click()">
+                <input type="file" id="customFileInput" class="hidden" accept="image/*" onchange="handleFileUpload(event)" />
+                <div class="w-14 h-14 mx-auto rounded-full bg-linen-100 text-terracotta-500 flex items-center justify-center mb-3">
+                  <i data-lucide="upload-cloud" class="w-7 h-7"></i>
+                </div>
+                <div class="font-bold text-stone-900 text-sm" id="uploadTitlePrompt">Click to Upload Your Artwork or Reference Sketch</div>
+                <div class="text-xs text-stone-500 mt-1">PNG, JPG, PDF up to 25MB. Can be a logo, tattoo, sketch, or photograph.</div>
+                <div id="uploadedPreviewContainer" class="mt-4 hidden inline-block p-2 bg-linen-50 rounded-xl border border-linen-300">
+                  <img id="uploadedPreviewImg" class="h-28 rounded-lg mx-auto object-contain" />
+                  <span id="uploadedFileName" class="text-xs text-stone-700 block mt-1 font-mono"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Custom Instructions Box -->
+            <div class="space-y-2">
+              <label class="block text-xs font-bold uppercase tracking-wider text-stone-700">Artisan Notes & Color Instructions</label>
+              <textarea id="customNotesInput" rows="3" placeholder="Tell us any specifics: e.g. 'Use golden-yellow and navy blue threads', 'Center on the back between shoulder blades', 'Size should be approx 8 inches wide'..." class="w-full rounded-xl border border-linen-300 p-3 text-xs focus:ring-2 focus:ring-terracotta-500 focus:outline-none"></textarea>
+            </div>
+
+            <div class="flex items-center justify-between pt-4">
+              <button onclick="goToStep(2)" class="px-4 py-2 text-stone-600 hover:text-stone-900 text-xs font-semibold">Back</button>
+              <button onclick="goToStep(4)" class="px-6 py-2.5 rounded-xl bg-stone-900 hover:bg-terracotta-500 text-white font-semibold text-xs transition flex items-center gap-2">
+                Continue to Logistics & Intake <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </button>
+            </div>
+
+          </div>
+
+          <!-- STEP 4: LOGISTICS, INTAKE PACKING SLIP & ORDER SUMMARY -->
+          <div id="wizardStep4" class="wizard-step space-y-6 hidden">
+            <h3 class="font-serif text-2xl font-bold text-stone-900">Shipping Logistics & Order Confirmation</h3>
+            <p class="text-sm text-stone-600">Choose how your garment gets to our Haryana studio. We generate your official Intake Barcode Slip instantly.</p>
+
+            <!-- Logistics Mode Selector -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              
+              <!-- Option A: Doorstep Reverse Pickup -->
+              <label onclick="selectShippingMode('reverse_pickup', 150)" class="shipping-card cursor-pointer p-4 rounded-2xl bg-white border-2 border-linen-300 hover:border-terracotta-500 transition selected-shipping">
+                <div class="flex items-start gap-3">
+                  <input type="radio" name="shippingMode" checked class="mt-1 accent-terracotta-500" />
+                  <div>
+                    <div class="flex items-center gap-2">
+                      <span class="font-bold text-sm text-stone-900">Doorstep Reverse Pickup</span>
+                      <span class="text-[10px] bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full">Recommended</span>
+                    </div>
+                    <p class="text-xs text-stone-500 mt-1">We schedule Delhivery/Shiprocket courier to pick up the parcel directly from your home address.</p>
+                    <span class="text-xs font-bold text-terracotta-600 block mt-2">+₹150 (Free over ₹1,499)</span>
+                  </div>
+                </div>
+              </label>
+
+              <!-- Option B: Self-Ship to Studio -->
+              <label onclick="selectShippingMode('self_ship', 0)" class="shipping-card cursor-pointer p-4 rounded-2xl bg-white border-2 border-linen-300 hover:border-terracotta-500 transition">
+                <div class="flex items-start gap-3">
+                  <input type="radio" name="shippingMode" class="mt-1 accent-terracotta-500" />
+                  <div>
+                    <div class="flex items-center gap-2">
+                      <span class="font-bold text-sm text-stone-900">I Will Courier It Myself</span>
+                      <span class="text-[10px] bg-stone-100 text-stone-800 font-medium px-2 py-0.5 rounded-full">Self-Ship</span>
+                    </div>
+                    <p class="text-xs text-stone-500 mt-1">Use India Post, Bluedart, or DTDC of your choice and provide tracking number after dispatch.</p>
+                    <span class="text-xs font-bold text-stone-600 block mt-2">₹0 Studio Surcharge</span>
+                  </div>
+                </div>
+              </label>
+
+            </div>
+
+            <!-- Haryana Studio Destination Card -->
+            <div class="bg-linen-100 p-5 rounded-2xl border border-linen-300">
+              <div class="flex items-start gap-3">
+                <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-terracotta-600 shadow-sm flex-shrink-0">
+                  <i data-lucide="map-pin" class="w-5 h-5"></i>
+                </div>
+                <div class="text-xs text-stone-700">
+                  <div class="font-bold text-stone-900 text-sm">Haryana Studio Delivery Address:</div>
+                  <p class="font-mono mt-1 text-stone-800">
+                    Balaji Embroidery Atelier & Studio<br />
+                    Plot 42, Artisan & Handloom Cluster, Sector 14<br />
+                    Gurugram, Haryana - 122001, India<br />
+                    Direct Phone: +91 98123 45678 | Email: studio@balajiembroidery.com
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- GENERATED INTAKE PACKING SLIP PREVIEW -->
+            <div class="bg-white p-5 rounded-2xl border-2 border-stone-800 stitch-border space-y-3">
+              <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center pb-3 border-b border-stone-200 gap-2">
+                <div>
+                  <span class="text-[10px] uppercase tracking-widest font-bold text-terracotta-600 block">OFFICIAL PARCEL INTAKE SLIP</span>
+                  <span class="font-mono text-sm font-bold text-stone-900" id="generatedIntakeId">INTAKE-BE-HAR-9824</span>
+                </div>
+                <button onclick="printIntakeSlip()" class="text-xs font-semibold px-3 py-1.5 rounded-lg bg-linen-100 hover:bg-stone-900 hover:text-white transition flex items-center gap-1.5 border border-linen-300">
+                  <i data-lucide="printer" class="w-3.5 h-3.5"></i> Print / Download Slip
+                </button>
+              </div>
+
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+                <div>
+                  <span class="text-stone-400 block text-[10px] uppercase">Article</span>
+                  <span class="font-semibold text-stone-900" id="summaryGarment">Denim Jacket</span>
+                </div>
+                <div>
+                  <span class="text-stone-400 block text-[10px] uppercase">Placement</span>
+                  <span class="font-semibold text-stone-900" id="summaryPlacement">Left Chest</span>
+                </div>
+                <div>
+                  <span class="text-stone-400 block text-[10px] uppercase">Stitch Style</span>
+                  <span class="font-semibold text-stone-900" id="summaryTechnique">Classic Silk</span>
+                </div>
+                <div>
+                  <span class="text-stone-400 block text-[10px] uppercase">Selected Motif</span>
+                  <span class="font-semibold text-stone-900" id="summaryMotif">Royal Peacock</span>
+                </div>
+              </div>
+
+              <div class="p-3 bg-amber-50 rounded-xl border border-amber-200 text-[11px] text-amber-900">
+                <strong>Important:</strong> Put this printed slip (or write the Intake ID clearly on paper) inside your parcel so our Haryana intake team can immediately identify your order upon unboxing.
+              </div>
+            </div>
+
+            <!-- Final Action Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-linen-300">
+              <div>
+                <span class="text-xs text-stone-500 block">Total Custom Service Fee:</span>
+                <span class="font-serif text-3xl font-bold text-stone-900" id="finalServicePrice">₹799</span>
+              </div>
+              <div class="flex items-center gap-3 w-full sm:w-auto">
+                <button onclick="goToStep(3)" class="px-4 py-2.5 text-stone-600 hover:text-stone-900 text-xs font-semibold">Back</button>
+                <button onclick="addCustomServiceToCart()" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-terracotta-500 hover:bg-terracotta-600 text-white font-bold text-sm shadow-lg shadow-terracotta-500/30 transition flex items-center justify-center gap-2">
+                  <i data-lucide="shopping-bag" class="w-4 h-4"></i> Add Custom Booking to Cart
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INTERACTIVE LIVE GARMENT VISUALIZER / STAGING STUDIO -->
+  <section id="visualizer" class="py-20 bg-linen-100 border-b border-linen-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-xs uppercase tracking-[0.25em] font-bold text-terracotta-500">Interactive Preview Studio</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stone-900 mt-1">
+          Live Embroidery Staging Canvas
+        </h2>
+        <p class="text-stone-600 text-sm mt-2">
+          Visualize how different embroidery motifs look on various garment fabrics and colors before sending in your piece.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white p-6 sm:p-10 rounded-3xl border border-linen-300 shadow-xl">
+        
+        <!-- Controls Column -->
+        <div class="lg:col-span-5 space-y-6">
+          
+          <!-- Garment Selector -->
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-2">1. Select Garment Canvas</label>
+            <div class="grid grid-cols-3 gap-2">
+              <button onclick="setVisualizerGarment('jacket')" id="visBtn-jacket" class="vis-garment-btn p-3 rounded-xl border-2 border-terracotta-500 bg-linen-50 text-xs font-bold text-stone-900 text-center">
+                Denim Jacket
+              </button>
+              <button onclick="setVisualizerGarment('kurta')" id="visBtn-kurta" class="vis-garment-btn p-3 rounded-xl border-2 border-linen-300 hover:border-terracotta-500 bg-white text-xs font-bold text-stone-700 text-center">
+                Linen Kurta
+              </button>
+              <button onclick="setVisualizerGarment('tote')" id="visBtn-tote" class="vis-garment-btn p-3 rounded-xl border-2 border-linen-300 hover:border-terracotta-500 bg-white text-xs font-bold text-stone-700 text-center">
+                Canvas Tote
+              </button>
+            </div>
+          </div>
+
+          <!-- Embroidery Motif Picker -->
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-2">2. Pick Embroidery Artwork</label>
+            <div class="grid grid-cols-4 gap-2">
+              <button onclick="setVisualizerMotif('peacock')" class="p-2 rounded-xl border border-linen-300 hover:border-terracotta-500 text-center bg-linen-50">
+                <span class="text-xl block">🦚</span>
+                <span class="text-[10px] font-semibold text-stone-800">Peacock</span>
+              </button>
+              <button onclick="setVisualizerMotif('lotus')" class="p-2 rounded-xl border border-linen-300 hover:border-terracotta-500 text-center bg-linen-50">
+                <span class="text-xl block">🪷</span>
+                <span class="text-[10px] font-semibold text-stone-800">Lotus</span>
+              </button>
+              <button onclick="setVisualizerMotif('tiger')" class="p-2 rounded-xl border border-linen-300 hover:border-terracotta-500 text-center bg-linen-50">
+                <span class="text-xl block">🐅</span>
+                <span class="text-[10px] font-semibold text-stone-800">Bengal Tiger</span>
+              </button>
+              <button onclick="setVisualizerMotif('botanical')" class="p-2 rounded-xl border border-linen-300 hover:border-terracotta-500 text-center bg-linen-50">
+                <span class="text-xl block">🌿</span>
+                <span class="text-[10px] font-semibold text-stone-800">Botanical</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Position & Scale Slider -->
+          <div class="space-y-3">
+            <div>
+              <div class="flex justify-between text-xs font-semibold text-stone-700 mb-1">
+                <span>Motif Scale</span>
+                <span id="scaleDisplay">100%</span>
+              </div>
+              <input type="range" min="60" max="150" value="100" id="motifScaleSlider" oninput="updateVisualizerScale(this.value)" class="w-full accent-terracotta-500" />
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-semibold text-stone-700 mb-1">
+                <span>Position on Garment</span>
+              </div>
+              <div class="grid grid-cols-3 gap-2">
+                <button onclick="setVisualizerPosition('chest')" class="py-1.5 rounded-lg border border-linen-300 text-xs font-medium hover:bg-linen-100">Left Chest</button>
+                <button onclick="setVisualizerPosition('center')" class="py-1.5 rounded-lg border border-linen-300 text-xs font-medium hover:bg-linen-100">Center</button>
+                <button onclick="setVisualizerPosition('back')" class="py-1.5 rounded-lg border border-linen-300 text-xs font-medium hover:bg-linen-100">Full Back</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-2">
+            <a href="#custom-service" class="w-full py-3 rounded-xl bg-terracotta-500 hover:bg-terracotta-600 text-white font-bold text-xs flex items-center justify-center gap-2 transition">
+              <i data-lucide="sparkles" class="w-4 h-4"></i> Apply This Design to My Order
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Canvas Staging Preview Area -->
+        <div class="lg:col-span-7">
+          <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-linen-200 border-2 border-linen-300 flex items-center justify-center shadow-inner group">
+            
+            <!-- Base Garment Mockup Image -->
+            <img id="visGarmentImg" 
+                 src="https://images.unsplash.com/photo-1576995853123-5a10305d93c0?w=1000&auto=format&fit=crop" 
+                 class="w-full h-full object-cover transition-opacity duration-300" 
+                 alt="Garment Preview Canvas" />
+            
+            <!-- Staged Embroidery Layer Overlay -->
+            <div id="visMotifContainer" class="absolute transition-all duration-300 pointer-events-none drop-shadow-2xl">
+              <div id="visMotifContent" class="text-6xl sm:text-8xl transform scale-100 transition-transform filter drop-shadow-[0_4px_8px_rgba(0,0,0,0.4)]">
+                🦚
+              </div>
+            </div>
+
+            <!-- Watermark Tag -->
+            <div class="absolute bottom-4 left-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-[10px] text-white font-mono tracking-wider">
+              Studio Visualizer Engine • Balaji Embroidery
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- REAL-TIME ORDER & PARCEL INTAKE TRACKER -->
+  <section id="tracker" class="py-20 bg-linen-50 border-b border-linen-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="text-xs uppercase tracking-[0.25em] font-bold text-terracotta-500">Live Studio Portal</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stone-900 mt-1">
+          Track Your Order or Mail-in Parcel
+        </h2>
+        <p class="text-stone-600 text-sm mt-2">
+          Enter your Order ID (e.g., <code class="bg-linen-200 px-1 py-0.5 rounded text-terracotta-600 font-bold">BE-ORD-4102</code>) or Mail-in Intake Code (<code class="bg-linen-200 px-1 py-0.5 rounded text-terracotta-600 font-bold">BE-HAR-8921</code>) to see current artisan milestones.
+        </p>
+      </div>
+
+      <!-- Search Input Box -->
+      <div class="bg-white p-4 rounded-2xl shadow-md border border-linen-300 flex flex-col sm:flex-row gap-3 mb-10">
+        <div class="relative flex-grow">
+          <i data-lucide="search" class="w-5 h-5 text-stone-400 absolute left-4 top-1/2 -translate-y-1/2"></i>
+          <input type="text" id="trackingIdInput" placeholder="Enter Order ID or Intake Code (e.g. BE-HAR-8921)" value="BE-HAR-8921" class="w-full pl-12 pr-4 py-3 rounded-xl border border-linen-200 focus:outline-none focus:ring-2 focus:ring-terracotta-500 text-sm font-mono uppercase" />
+        </div>
+        <button onclick="handleTrackLookup()" class="px-8 py-3 rounded-xl bg-stone-900 hover:bg-terracotta-500 text-white font-bold text-sm transition flex items-center justify-center gap-2">
+          <i data-lucide="compass" class="w-4 h-4"></i> Lookup Status
+        </button>
+      </div>
+
+      <!-- Dynamic Tracking Timeline Result Card -->
+      <div id="trackingResultContainer" class="bg-white rounded-3xl p-6 sm:p-8 border border-linen-300 shadow-xl">
+        
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center pb-6 border-b border-linen-200 gap-4">
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="font-mono text-base font-bold text-stone-900" id="trackDisplayId">BE-HAR-8921</span>
+              <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-800" id="trackStatusBadge">
+                In Production at Haryana Studio
+              </span>
+            </div>
+            <div class="text-xs text-stone-500 mt-1" id="trackItemDesc">Levi's Denim Jacket • Royal Peacock Zardozi Backpiece</div>
+          </div>
+          <div class="text-right text-xs">
+            <span class="text-stone-400 block">Estimated Return Dispatch</span>
+            <span class="font-bold text-stone-900 text-sm" id="trackEstDate">Oct 12, 2026</span>
+          </div>
+        </div>
+
+        <!-- 5-Stage Visual Timeline -->
+        <div class="py-8">
+          <div class="relative">
+            <!-- Progress Line -->
+            <div class="hidden sm:block absolute top-1/2 left-0 right-0 h-1 bg-linen-200 -translate-y-1/2 z-0"></div>
+            <div id="timelineProgressBar" class="hidden sm:block absolute top-1/2 left-0 h-1 bg-terracotta-500 -translate-y-1/2 z-0 transition-all duration-700" style="width: 60%;"></div>
+
+            <!-- Steps Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-5 gap-6 sm:gap-2 relative z-10">
+              
+              <!-- Stage 1: Order Placed / Intake Generated -->
+              <div class="flex sm:flex-col items-center gap-3 sm:gap-2 text-left sm:text-center">
+                <div class="w-10 h-10 rounded-full bg-emerald-500 text-white flex items-center justify-center font-bold text-xs shadow-md">
+                  <i data-lucide="check" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-stone-900">Intake Booked</div>
+                  <div class="text-[11px] text-stone-500">Oct 02 • Slip Generated</div>
+                </div>
+              </div>
+
+              <!-- Stage 2: Inbound Courier -->
+              <div class="flex sm:flex-col items-center gap-3 sm:gap-2 text-left sm:text-center">
+                <div class="w-10 h-10 rounded-full bg-emerald-500 text-white flex items-center justify-center font-bold text-xs shadow-md">
+                  <i data-lucide="check" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-stone-900">Parcel Received</div>
+                  <div class="text-[11px] text-stone-500">Oct 04 • At Haryana Workshop</div>
+                </div>
+              </div>
+
+              <!-- Stage 3: Artisan In-Progress (Current active) -->
+              <div class="flex sm:flex-col items-center gap-3 sm:gap-2 text-left sm:text-center">
+                <div class="w-10 h-10 rounded-full bg-terracotta-500 text-white flex items-center justify-center font-bold text-xs shadow-lg ring-4 ring-terracotta-100 animate-pulse">
+                  <i data-lucide="scissors" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-terracotta-600">Needlework Active</div>
+                  <div class="text-[11px] text-stone-500">70% Stitches Complete</div>
+                </div>
+              </div>
+
+              <!-- Stage 4: Quality Finishing -->
+              <div class="flex sm:flex-col items-center gap-3 sm:gap-2 text-left sm:text-center opacity-40">
+                <div class="w-10 h-10 rounded-full bg-linen-300 text-stone-600 flex items-center justify-center font-bold text-xs">
+                  4
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-stone-800">Quality Check</div>
+                  <div class="text-[11px] text-stone-500">Steam finishing & backing</div>
+                </div>
+              </div>
+
+              <!-- Stage 5: Dispatched Back -->
+              <div class="flex sm:flex-col items-center gap-3 sm:gap-2 text-left sm:text-center opacity-40">
+                <div class="w-10 h-10 rounded-full bg-linen-300 text-stone-600 flex items-center justify-center font-bold text-xs">
+                  5
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-stone-800">Return Courier</div>
+                  <div class="text-[11px] text-stone-500">Out for Delivery</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-linen-100 p-4 rounded-xl text-xs text-stone-600 flex items-center justify-between">
+          <span>Need help or want to modify your instructions?</span>
+          <a href="#faqs" class="font-bold text-terracotta-600 hover:underline">Contact Workshop Artisan &rarr;</a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ARTISAN HERITAGE & CRAFTSMANSHIP STORY -->
+  <section id="heritage" class="py-20 bg-white border-b border-linen-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-6 space-y-6">
+          <span class="text-xs uppercase tracking-[0.25em] font-bold text-terracotta-500">The Studio Story</span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-stone-900 leading-tight">
+            Preserving Heritage Needles in the Heart of Haryana
+          </h2>
+          <p class="text-stone-600 text-base leading-relaxed">
+            Founded with a passion for preserving traditional Indian embroidery techniques while adapting them to modern silhouettes, <strong>Balaji Embroidery</strong> brings together multigenerational artisans specializing in Zardozi bullion, intricate Aari tambour work, and fine silk thread-painting.
+          </p>
+          <p class="text-stone-600 text-sm leading-relaxed">
+            Every stitch is placed by hand using 100% natural mulberry silk and mercerized cotton threads. When you send your cherished jacket, saree, or kurta to our studio, you become part of a living craft tradition that values slow fashion and heirloom longevity over mass manufacture.
+          </p>
+
+          <div class="grid grid-cols-2 gap-6 pt-4 border-t border-linen-200">
+            <div>
+              <div class="font-serif text-2xl font-bold text-terracotta-600">Zero Waste</div>
+              <div class="text-xs text-stone-500 mt-1">Upcycling pre-loved clothing through artistic embellishment</div>
+            </div>
+            <div>
+              <div class="font-serif text-2xl font-bold text-terracotta-600">Master Led</div>
+              <div class="text-xs text-stone-500 mt-1">Direct artisan oversight on every single commission</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+          <div class="space-y-4">
+            <img src="https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?w=600&auto=format&fit=crop" class="rounded-2xl shadow-md aspect-square object-cover" alt="Silk Threads" />
+            <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?w=600&auto=format&fit=crop" class="rounded-2xl shadow-md aspect-[4/5] object-cover" alt="Artisan Embroidery" />
+          </div>
+          <div class="space-y-4 pt-8">
+            <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600&auto=format&fit=crop" class="rounded-2xl shadow-md aspect-[4/5] object-cover" alt="Detailed Stitches" />
+            <div class="bg-linen-900 text-white p-6 rounded-2xl aspect-square flex flex-col justify-between">
+              <i data-lucide="quote" class="w-8 h-8 text-antique-gold"></i>
+              <p class="font-serif text-lg italic">"A needle without a hurry weaves threads that last generations."</p>
+              <span class="text-xs text-stone-400 uppercase tracking-widest">— Balaji Atelier</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQS & CONTACT SECTION -->
+  <section id="faqs" class="py-20 bg-linen-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-xs uppercase tracking-[0.25em] font-bold text-terracotta-500">Answers & Studio Info</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stone-900 mt-1">Frequently Asked Questions</h2>
+        <p class="text-stone-600 text-sm mt-2">Everything you need to know about purchasing ready-made art and sending in your garments.</p>
+      </div>
+
+      <!-- FAQ Accordion -->
+      <div class="space-y-4 mb-16">
+        
+        <div class="bg-white rounded-2xl border border-linen-300 p-5 shadow-sm">
+          <button onclick="toggleFaq(1)" class="w-full flex justify-between items-center text-left font-bold text-stone-900 text-base">
+            <span>How do I pack and ship my garment to your Haryana workshop?</span>
+            <i data-lucide="chevron-down" id="faqIcon1" class="w-5 h-5 text-terracotta-500 transition-transform"></i>
+          </button>
+          <div id="faqContent1" class="mt-3 text-sm text-stone-600 leading-relaxed hidden">
+            After configuring your order online, the website generates an official <strong>Intake Slip</strong>. Simply place your clean garment inside a secure courier polybag or box with the printed slip inside. If you selected <em>Doorstep Reverse Pickup</em>, our courier partner (Delhivery/Shiprocket) will collect it directly from your address. If you chose <em>Self-Ship</em>, dispatch it to our Gurugram, Haryana address and input your tracking code in your order portal.
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-linen-300 p-5 shadow-sm">
+          <button onclick="toggleFaq(2)" class="w-full flex justify-between items-center text-left font-bold text-stone-900 text-base">
+            <span>Can you embroider over stains, holes, or tears in my favorite clothes?</span>
+            <i data-lucide="chevron-down" id="faqIcon2" class="w-5 h-5 text-terracotta-500 transition-transform"></i>
+          </button>
+          <div id="faqContent2" class="mt-3 text-sm text-stone-600 leading-relaxed hidden">
+            Yes! We specialize in artistic visible mending. When configuring your custom order, upload a photo showing the damaged area and add a note. Our artisans will strategically place florals, motifs, or geometric borders directly over the imperfection to transform it into a one-of-a-kind art piece.
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-linen-300 p-5 shadow-sm">
+          <button onclick="toggleFaq(3)" class="w-full flex justify-between items-center text-left font-bold text-stone-900 text-base">
+            <span>What is the standard turnaround time?</span>
+            <i data-lucide="chevron-down" id="faqIcon3" class="w-5 h-5 text-terracotta-500 transition-transform"></i>
+          </button>
+          <div id="faqContent3" class="mt-3 text-sm text-stone-600 leading-relaxed hidden">
+            Ready-to-ship art and apparel are dispatched within 24–48 hours. Custom mail-in garments typically require 7 to 10 working days at our Haryana workshop once received, depending on stitch density and complexity. You can track progress in real time via our live tracking portal.
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-linen-300 p-5 shadow-sm">
+          <button onclick="toggleFaq(4)" class="w-full flex justify-between items-center text-left font-bold text-stone-900 text-base">
+            <span>How should I wash and care for hand-embroidered articles?</span>
+            <i data-lucide="chevron-down" id="faqIcon4" class="w-5 h-5 text-terracotta-500 transition-transform"></i>
+          </button>
+          <div id="faqContent4" class="mt-3 text-sm text-stone-600 leading-relaxed hidden">
+            We recommend gentle hand-washing inside-out in cold water using mild silk/wool detergent, or professional dry cleaning for heavy Zardozi metallic work. Never wring or bleach. Always iron on the reverse side with a thin cotton cloth placed over the embroidery.
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Studio Direct Contact & Visit Card -->
+      <div class="bg-white p-8 rounded-3xl border border-linen-300 shadow-xl">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div>
+            <span class="text-xs uppercase tracking-wider font-bold text-terracotta-500">Visit or Call Us</span>
+            <h3 class="font-serif text-2xl font-bold text-stone-900 mt-1">Balaji Embroidery Studio</h3>
+            <p class="text-xs text-stone-600 mt-2 leading-relaxed">
+              We welcome clients by appointment to review thread swatches, examine sample pieces, or hand-deliver couture articles.
+            </p>
+            <div class="mt-4 space-y-2 text-xs text-stone-700">
+              <div class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-terracotta-500"></i> Sector 14, Gurugram, Haryana - 122001, India</div>
+              <div class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4 text-terracotta-500"></i> +91 98123 45678 (WhatsApp & Calls)</div>
+              <div class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4 text-terracotta-500"></i> orders@balajiembroidery.com</div>
+              <div class="flex items-center gap-2"><i data-lucide="clock" class="w-4 h-4 text-terracotta-500"></i> Mon – Sat: 10:00 AM – 7:00 PM IST</div>
+            </div>
+          </div>
+
+          <!-- Quick Message Form -->
+          <form onsubmit="handleInquirySubmit(event)" class="space-y-3 bg-linen-50 p-5 rounded-2xl border border-linen-200">
+            <h4 class="font-bold text-xs uppercase tracking-wider text-stone-800">Quick Consultation Request</h4>
+            <input type="text" required placeholder="Your Name" class="w-full text-xs p-2.5 rounded-lg border border-linen-300 focus:outline-none focus:ring-1 focus:ring-terracotta-500" />
+            <input type="tel" required placeholder="Phone / WhatsApp (+91...)" class="w-full text-xs p-2.5 rounded-lg border border-linen-300 focus:outline-none focus:ring-1 focus:ring-terracotta-500" />
+            <textarea rows="2" placeholder="Briefly describe what you'd like embroidered..." class="w-full text-xs p-2.5 rounded-lg border border-linen-300 focus:outline-none focus:ring-1 focus:ring-terracotta-500"></textarea>
+            <button type="submit" class="w-full py-2.5 rounded-lg bg-stone-900 hover:bg-terracotta-500 text-white font-semibold text-xs transition">
+              Send Message to Artisan
+            </button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-linen-900 text-stone-400 py-16 border-t border-stone-800 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+        
+        <!-- Brand Info -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-2 text-white">
+            <div class="w-8 h-8 rounded-full bg-terracotta-500 flex items-center justify-center text-white">
+              <i data-lucide="scissors" class="w-4 h-4"></i>
+            </div>
+            <span class="font-serif text-xl font-bold tracking-wide">BALAJI EMBROIDERY</span>
+          </div>
+          <p class="text-xs text-stone-400 leading-relaxed">
+            Haryana's premier bespoke embroidery studio. Melding heritage Zardozi, Aari, and modern thread-painting for ready-to-hang art and customized couture.
+          </p>
+          <div class="text-xs text-antique-gold font-mono">balajiembroidery.com</div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-4">Explore Store</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#catalog" class="hover:text-white transition">Ready-Made Hoop Art</a></li>
+            <li><a href="#catalog" class="hover:text-white transition">Embroidered Jackets & Apparel</a></li>
+            <li><a href="#custom-service" class="hover:text-white transition">Send Your Garment (Mail-in)</a></li>
+            <li><a href="#visualizer" class="hover:text-white transition">Live Garment Stager</a></li>
+            <li><a href="#tracker" class="hover:text-white transition">Order & Parcel Tracking</a></li>
+          </ul>
+        </div>
+
+        <!-- Artisan Policies -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-4">Customer Care</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#faqs" class="hover:text-white transition">Shipping & Reverse Pickup</a></li>
+            <li><a href="#faqs" class="hover:text-white transition">Garment Suitability Guide</a></li>
+            <li><a href="#faqs" class="hover:text-white transition">Embroidery Care Instructions</a></li>
+            <li><a href="#faqs" class="hover:text-white transition">Wholesale & Corporate Gifting</a></li>
+            <li><a href="#faqs" class="hover:text-white transition">Terms & Studio Policies</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter & Promo -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-white">Join The Atelier Club</h4>
+          <p class="text-xs text-stone-400">Receive ₹200 off your first embroidery commission or ready artwork.</p>
+          <div class="flex gap-2">
+            <input type="email" placeholder="Enter your email" class="w-full text-xs p-2.5 rounded-lg bg-stone-800 border border-stone-700 text-white focus:outline-none focus:border-terracotta-500" />
+            <button onclick="alert('Thank you for subscribing to Balaji Embroidery!')" class="px-4 py-2.5 rounded-lg bg-terracotta-500 hover:bg-terracotta-600 text-white font-bold text-xs transition">
+              Join
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-12 pt-6 border-t border-stone-800 flex flex-col sm:flex-row justify-between items-center text-xs text-stone-500 gap-4">
+        <div>&copy; 2026 Balaji Embroidery (balajiembroidery.com). All rights reserved. Handcrafted in Haryana, India.</div>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-stone-300">Privacy Policy</a>
+          <a href="#" class="hover:text-stone-300">Terms of Service</a>
+          <a href="#" class="hover:text-stone-300">Craft Ethics</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SLIDE-OVER SHOPPING CART DRAWER -->
+  <div id="cartDrawerBackdrop" class="fixed inset-0 bg-stone-950/60 backdrop-blur-sm z-50 hidden transition-opacity" onclick="toggleCartDrawer()"></div>
+  <div id="cartDrawer" class="fixed top-0 right-0 bottom-0 w-full max-w-md bg-white z-50 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col">
+    
+    <!-- Cart Header -->
+    <div class="p-5 border-b border-linen-200 flex items-center justify-between bg-linen-50">
+      <div class="flex items-center gap-2">
+        <i data-lucide="shopping-bag" class="w-5 h-5 text-terracotta-500"></i>
+        <h3 class="font-serif text-xl font-bold text-stone-900">Your Embroidery Bag</h3>
+      </div>
+      <button onclick="toggleCartDrawer()" class="p-2 text-stone-500 hover:text-stone-900 rounded-full hover:bg-linen-200">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+    </div>
+
+    <!-- Cart Items Scrollable List -->
+    <div id="cartItemsList" class="flex-grow overflow-y-auto p-5 space-y-4 custom-scrollbar">
+      <!-- Populated dynamically by JS -->
+    </div>
+
+    <!-- Cart Footer & Checkout -->
+    <div class="p-5 border-t border-linen-200 bg-linen-50 space-y-3">
+      <!-- Promo code input -->
+      <div class="flex gap-2">
+        <input type="text" id="promoCodeInput" placeholder="Promo code (try WELCOME10)" class="w-full text-xs p-2.5 rounded-lg border border-linen-300 uppercase font-mono" />
+        <button onclick="applyPromoCode()" class="px-4 py-2 bg-stone-900 hover:bg-terracotta-500 text-white text-xs font-semibold rounded-lg transition">Apply</button>
+      </div>
+      <div id="promoNotice" class="text-[11px] text-emerald-600 hidden"></div>
+
+      <div class="space-y-1.5 text-xs text-stone-600 pt-2 border-t border-linen-200">
+        <div class="flex justify-between">
+          <span>Subtotal</span>
+          <span id="cartSubtotal" class="font-mono font-bold text-stone-900">₹0</span>
+        </div>
+        <div class="flex justify-between">
+          <span>Doorstep Courier / Shipping</span>
+          <span id="cartShipping" class="font-mono text-emerald-600 font-medium">Free</span>
+        </div>
+        <div class="flex justify-between text-sm font-bold text-stone-900 pt-2 border-t border-linen-200">
+          <span>Estimated Total</span>
+          <span id="cartTotal" class="font-mono font-bold text-terracotta-600 text-lg">₹0</span>
+        </div>
+      </div>
+
+      <button onclick="openCheckoutModal()" class="w-full py-3.5 rounded-xl bg-terracotta-500 hover:bg-terracotta-600 text-white font-bold text-sm shadow-lg shadow-terracotta-500/25 transition flex items-center justify-center gap-2">
+        <i data-lucide="lock" class="w-4 h-4"></i> Secure Checkout
+      </button>
+      <div class="text-[10px] text-center text-stone-500 flex items-center justify-center gap-2">
+        <span>UPI / Cards / NetBanking / Reverse Logistics Guaranteed</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- PRODUCT QUICK-VIEW MODAL -->
+  <div id="quickViewModal" class="fixed inset-0 bg-stone-950/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-3xl w-full overflow-hidden shadow-2xl border border-linen-300 relative flex flex-col md:flex-row">
+      <button onclick="closeQuickView()" class="absolute top-4 right-4 z-10 p-2 bg-white/80 rounded-full text-stone-700 hover:text-terracotta-500">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      
+      <div class="md:w-1/2 aspect-square bg-linen-100">
+        <img id="quickViewImg" src="" alt="Product Detail" class="w-full h-full object-cover" />
+      </div>
+
+      <div class="md:w-1/2 p-6 sm:p-8 flex flex-col justify-between">
+        <div>
+          <span id="quickViewBadge" class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-terracotta-100 text-terracotta-700 mb-2 inline-block">Ready to Ship</span>
+          <h3 id="quickViewTitle" class="font-serif text-2xl font-bold text-stone-900">Product Name</h3>
+          <div id="quickViewPrice" class="font-mono text-xl font-bold text-terracotta-600 mt-2">₹1,899</div>
+          
+          <p id="quickViewDesc" class="text-xs text-stone-600 mt-3 leading-relaxed">
+            Detailed description of craft, fabric, and hand stitching.
+          </p>
+
+          <div class="mt-4 pt-4 border-t border-linen-200 space-y-2 text-xs text-stone-700">
+            <div><strong>Fabric:</strong> <span id="quickViewFabric">Pure Raw Silk</span></div>
+            <div><strong>Stitch Style:</strong> <span id="quickViewStitches">Zardozi & French Knots</span></div>
+            <div><strong>Dimensions:</strong> <span id="quickViewDimensions">10 inch Diameter Hoop</span></div>
+          </div>
+        </div>
+
+        <div class="pt-6">
+          <button id="quickViewAddBtn" onclick="addCurrentQuickViewToCart()" class="w-full py-3 rounded-xl bg-stone-900 hover:bg-terracotta-500 text-white font-bold text-xs transition flex items-center justify-center gap-2">
+            <i data-lucide="shopping-bag" class="w-4 h-4"></i> Add to Bag
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHECKOUT MODAL -->
+  <div id="checkoutModal" class="fixed inset-0 bg-stone-950/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-xl w-full p-6 sm:p-8 overflow-y-auto max-h-[90vh] shadow-2xl border border-linen-300 relative custom-scrollbar">
+      <button onclick="closeCheckoutModal()" class="absolute top-4 right-4 p-2 text-stone-500 hover:text-stone-900">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="text-center pb-4 border-b border-linen-200">
+        <span class="text-[10px] uppercase tracking-widest font-bold text-terracotta-600">BALAJI EMBROIDERY CHECKOUT</span>
+        <h3 class="font-serif text-2xl font-bold text-stone-900 mt-1">Complete Your Order</h3>
+      </div>
+
+      <form onsubmit="handleFinalCheckout(event)" class="mt-6 space-y-4 text-xs">
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block font-semibold text-stone-700 mb-1">First Name</label>
+            <input type="text" required placeholder="Aarav" class="w-full p-2.5 rounded-lg border border-linen-300" />
+          </div>
+          <div>
+            <label class="block font-semibold text-stone-700 mb-1">Last Name</label>
+            <input type="text" required placeholder="Sharma" class="w-full p-2.5 rounded-lg border border-linen-300" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block font-semibold text-stone-700 mb-1">Email</label>
+            <input type="email" required placeholder="aarav@example.com" class="w-full p-2.5 rounded-lg border border-linen-300" />
+          </div>
+          <div>
+            <label class="block font-semibold text-stone-700 mb-1">Phone Number (for Courier)</label>
+            <input type="tel" required placeholder="+91 98765 43210" class="w-full p-2.5 rounded-lg border border-linen-300" />
+          </div>
+        </div>
+
+        <div>
+          <label class="block font-semibold text-stone-700 mb-1">Delivery / Pickup Address</label>
+          <input type="text" required placeholder="House/Flat No., Apartment, Street" class="w-full p-2.5 rounded-lg border border-linen-300 mb-2" />
+          <div class="grid grid-cols-3 gap-2">
+            <input type="text" required placeholder="City" class="w-full p-2.5 rounded-lg border border-linen-300" />
+            <input type="text" required placeholder="State (e.g. Haryana)" class="w-full p-2.5 rounded-lg border border-linen-300" />
+            <input type="text" required placeholder="PIN Code" class="w-full p-2.5 rounded-lg border border-linen-300" />
+          </div>
+        </div>
+
+        <div class="pt-2">
+          <label class="block font-semibold text-stone-700 mb-2">Payment Option</label>
+          <div class="space-y-2">
+            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-linen-300 cursor-pointer bg-linen-50">
+              <input type="radio" name="payMethod" checked class="accent-terracotta-500" />
+              <span class="font-semibold text-stone-900">UPI / QR (Google Pay, PhonePe, Paytm)</span>
+            </label>
+            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-linen-300 cursor-pointer">
+              <input type="radio" name="payMethod" class="accent-terracotta-500" />
+              <span class="font-semibold text-stone-900">Credit / Debit Card (Visa, Mastercard, RuPay)</span>
+            </label>
+            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-linen-300 cursor-pointer">
+              <input type="radio" name="payMethod" class="accent-terracotta-500" />
+              <span class="font-semibold text-stone-900">Cash on Delivery (Available for ready-made articles)</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="p-3 bg-linen-100 rounded-xl flex justify-between items-center font-bold text-sm text-stone-900 mt-4">
+          <span>Amount Payable:</span>
+          <span id="checkoutPayableTotal" class="font-mono text-terracotta-600 text-lg">₹0</span>
+        </div>
+
+        <button type="submit" class="w-full py-3.5 rounded-xl bg-terracotta-500 hover:bg-terracotta-600 text-white font-bold text-sm shadow-lg transition flex items-center justify-center gap-2">
+          <i data-lucide="check-circle" class="w-4 h-4"></i> Confirm & Authorize Order
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ORDER SUCCESS NOTIFICATION MODAL -->
+  <div id="orderSuccessModal" class="fixed inset-0 bg-stone-950/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-md w-full p-8 text-center shadow-2xl border border-linen-300 space-y-4">
+      <div class="w-16 h-16 mx-auto rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center">
+        <i data-lucide="check" class="w-8 h-8"></i>
+      </div>
+      <h3 class="font-serif text-3xl font-bold text-stone-900">Order Confirmed!</h3>
+      <p class="text-xs text-stone-600 leading-relaxed">
+        Thank you for trusting Balaji Embroidery. Your order reference is <strong id="successOrderId" class="font-mono text-stone-900">BE-ORD-8821</strong>. We have sent your order confirmation receipt to your email.
+      </p>
+      <div class="p-3 bg-linen-100 rounded-xl text-[11px] text-stone-700 text-left">
+        <strong>What's Next?</strong><br />
+        • If you booked a custom mail-in service, your reverse pickup is being scheduled.<br />
+        • Ready-to-ship articles will dispatch from our Haryana workshop within 24 hours.
+      </div>
+      <button onclick="closeSuccessModal()" class="w-full py-3 rounded-xl bg-stone-900 hover:bg-terracotta-500 text-white font-bold text-xs transition">
+        Return to Atelier
+      </button>
+    </div>
+  </div>
+
+  <!-- APPLICATION JAVASCRIPT LOGIC -->
+  <script>
+    // ----------------------------------------------------
+    // STATE MANAGEMENT
+    // ----------------------------------------------------
+    let currentCurrency = 'INR'; // 'INR' or 'USD'
+    const exchangeRate = 0.012; // 1 INR ~ 0.012 USD (or ~83 INR per USD)
+
+    let cart = [];
+    let appliedDiscount = 0; // percentage e.g. 0.10
+
+    // Custom Wizard State
+    let wizardState = {
+      garment: 'Denim Jacket / Trucker',
+      garmentCost: 0,
+      placement: 'Left Chest / Pocket Accent',
+      basePlacementPrice: 799,
+      technique: 'Classic Silk Floss (Needle Painting)',
+      techniqueSurcharge: 0,
+      motif: 'Royal Peacock & Lotus Vine',
+      motifImg: 'https://images.unsplash.com/photo-1544816155-12df9643f363?w=500&auto=format&fit=crop',
+      shippingMode: 'reverse_pickup',
+      shippingCost: 150,
+      customNotes: '',
+      intakeId: 'INTAKE-BE-HAR-' + Math.floor(1000 + Math.random() * 9000)
+    };
+
+    // ----------------------------------------------------
+    // PRODUCTS DATA (READY-MADE ARTICLES)
+    // ----------------------------------------------------
+    const products = [
+      {
+        id: 1,
+        title: "Mayura's Song (Peacock in Sacred Grove)",
+        category: "hoop",
+        priceINR: 2499,
+        fabric: "Pure Raw Ahimsa Silk on Beechwood Hoop",
+        stitches: "Zardozi metallic bullion & fine silk needle-painting",
+        dimensions: "10-inch diameter",
+        image: "https://images.unsplash.com/photo-1607344645866-009c320c5ab8?w=800&auto=format&fit=crop",
+        tag: "Bestseller",
+        desc: "An heirloom masterpiece depicting the sacred Indian peacock amidst lotus ponds. Stitched over 38 artisan hours using multi-hue metallic threads."
+      },
+      {
+        id: 2,
+        title: "Vintage Denim Jacket with Flora Embroidery",
+        category: "apparel",
+        priceINR: 4299,
+        fabric: "100% Upcycled Heavy Cotton Denim",
+        stitches: "Running Kantha, French knots, satin floral relief",
+        dimensions: "Size M / Relaxed Oversized Fit",
+        image: "https://images.unsplash.com/photo-1576995853123-5a10305d93c0?w=800&auto=format&fit=crop",
+        tag: "One-of-a-Kind",
+        desc: "Hand-curated vintage trucker jacket embellished across the entire back panel with wild Gulmohar blooms and forest flora."
+      },
+      {
+        id: 3,
+        title: "Gulabi Chanderi Dupatta with Aari Borders",
+        category: "saree",
+        priceINR: 3799,
+        fabric: "Handwoven Chanderi Silk Cotton",
+        stitches: "Traditional Aari tambour hook with antique gold zardozi",
+        dimensions: "2.5 Meters Length x 36 Inch Width",
+        image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=800&auto=format&fit=crop",
+        tag: "Festive Heirloom",
+        desc: "A sheer blush pink Chanderi stole bordered with scalloped gold threadwork and delicate floral butis."
+      },
+      {
+        id: 4,
+        title: "Botanical Fern & Moth Framed Textile Art",
+        category: "hoop",
+        priceINR: 1899,
+        fabric: "Unbleached Belgian Linen in Teak Frame",
+        stitches: "Detailed three-dimensional stumpwork & needle painting",
+        dimensions: "8 x 10 Inches Museum Glass Frame",
+        image: "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?w=800&auto=format&fit=crop",
+        tag: "Archival Art",
+        desc: "Scientific botanical study of moon moths and forest ferns rendered in nuanced green and earthen silk floss."
+      },
+      {
+        id: 5,
+        title: "Loomed Canvas Tote with Sacred Lotus Emblem",
+        category: "accessories",
+        priceINR: 1199,
+        fabric: "16oz Heavyweight Natural Cotton Canvas",
+        stitches: "Heavy crewel stitch with reinforced backing",
+        dimensions: "15 x 16 x 4 Inches with Stitched Handles",
+        image: "https://images.unsplash.com/photo-1544816155-12df9643f363?w=800&auto=format&fit=crop",
+        tag: "Daily Essential",
+        desc: "Durable everyday market tote detailed with an ornate blooming lotus medallion. Fully washable and reinforced."
+      },
+      {
+        id: 6,
+        title: "Midnight Indigo Kurta with Resham Collar",
+        category: "apparel",
+        priceINR: 2899,
+        fabric: "100% Khadi Handloom Cotton",
+        stitches: "Resham silk chain stitch along placket and cuffs",
+        dimensions: "Available in S, M, L, XL",
+        image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=800&auto=format&fit=crop",
+        tag: "Handloom",
+        desc: "Deep indigo straight-cut kurta tailored in Haryana with minimalist geometric thread embroidery framing the neckline."
+      },
+      {
+        id: 7,
+        title: "Royal Bengal Tiger Backpiece Art",
+        category: "hoop",
+        priceINR: 3499,
+        fabric: "Velvet Base mounted on Hardwood Stretcher",
+        stitches: "Dense directional thread painting with bullion wire eyes",
+        dimensions: "12-inch Diameter Round Art",
+        image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&auto=format&fit=crop",
+        tag: "Collector's Piece",
+        desc: "Fierce and majestic Bengal tiger captured in golden-yellow silk tones against a nocturnal black velvet backdrop."
+      },
+      {
+        id: 8,
+        title: "Embroidered Velvet Potli Evening Pouch",
+        category: "accessories",
+        priceINR: 1499,
+        fabric: "Plush Emerald Velvet with Braided Tassels",
+        stitches: "Gota patti, glass pearls, and floral zardozi",
+        dimensions: "8 x 9 Inches with Drawstring",
+        image: "https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?w=800&auto=format&fit=crop",
+        tag: "Bridal Favorite",
+        desc: "Classic wedding and celebratory handbag embellished with intricate traditional Haryana craftsmanship."
+      }
+    ];
+
+    // ----------------------------------------------------
+    // INITIALIZATION & RENDER
+    // ----------------------------------------------------
+    document.addEventListener("DOMContentLoaded", () => {
+      renderProducts(products);
+      updateWizardPrice();
+      lucide.createIcons();
+    });
+
+    // Format currency string
+    function formatPrice(amountINR) {
+      if (currentCurrency === 'USD') {
+        const usd = Math.round(amountINR * exchangeRate);
+        return `$${usd}`;
+      } else {
+        return `₹${amountINR.toLocaleString('en-IN')}`;
+      }
+    }
+
+    // Toggle currency switcher
+    function toggleCurrency() {
+      currentCurrency = currentCurrency === 'INR' ? 'USD' : 'INR';
+      document.getElementById('currentCurrencyLabel').innerText = currentCurrency === 'INR' ? 'INR (₹)' : 'USD ($)';
+      document.getElementById('currencyBtn').classList.toggle('text-antique-gold');
+      document.getElementById('mobileCurrencyToggleLabel').innerText = currentCurrency === 'INR' ? 'USD ($)' : 'INR (₹)';
+      
+      // Re-render products and prices
+      renderProducts();
+      updateWizardPrice();
+      updateCartDrawer();
+      updateStaticPriceTags();
+    }
+
+    function updateStaticPriceTags() {
+      document.querySelectorAll('.price-tag').forEach(el => {
+        const inr = parseInt(el.getAttribute('data-base-inr'));
+        if (!isNaN(inr)) {
+          el.innerText = formatPrice(inr);
+        }
+      });
+    }
+
+    // Render Product Cards
+    function renderProducts(itemsToRender = products) {
+      const grid = document.getElementById("productGrid");
+      grid.innerHTML = itemsToRender.map(p => `
+        <div class="bg-white rounded-3xl overflow-hidden border border-linen-300 hover:shadow-xl transition-all duration-300 flex flex-col group">
+          <div class="relative aspect-square overflow-hidden bg-linen-100">
+            <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-md text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full text-stone-800 shadow-sm">
+              ${p.tag}
+            </span>
+            <button onclick="openQuickView(${p.id})" class="absolute bottom-3 right-3 bg-white/95 text-stone-900 hover:text-terracotta-500 p-2.5 rounded-full shadow-md transition transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
+              <i data-lucide="eye" class="w-4 h-4"></i>
+            </button>
+          </div>
+          <div class="p-5 flex flex-col justify-between flex-grow">
+            <div>
+              <span class="text-[10px] uppercase font-bold tracking-widest text-antique-gold">${p.category}</span>
+              <h3 class="font-serif text-lg font-bold text-stone-900 mt-1 group-hover:text-terracotta-600 transition leading-snug">
+                ${p.title}
+              </h3>
+              <p class="text-xs text-stone-500 mt-1 line-clamp-2">${p.desc}</p>
+            </div>
+
+            <div class="pt-4 mt-4 border-t border-linen-200 flex items-center justify-between">
+              <span class="font-mono text-base font-bold text-stone-900">${formatPrice(p.priceINR)}</span>
+              <button onclick="addToCartProduct(${p.id})" class="px-3.5 py-1.5 rounded-xl bg-linen-100 hover:bg-stone-900 hover:text-white text-stone-900 font-semibold text-xs transition flex items-center gap-1.5">
+                <i data-lucide="plus" class="w-3.5 h-3.5"></i> Add
+              </button>
+            </div>
+          </div>
+        </div>
+      `).join("");
+      lucide.createIcons();
+    }
+
+    // Filter Products by category
+    function filterProducts(cat) {
+      document.querySelectorAll('.cat-filter-btn').forEach(btn => {
+        if (btn.getAttribute('data-cat') === cat) {
+          btn.className = "cat-filter-btn px-4 py-2 rounded-full bg-stone-900 text-white transition";
+        } else {
+          btn.className = "cat-filter-btn px-4 py-2 rounded-full bg-white text-stone-700 hover:bg-linen-200 border border-linen-300 transition";
+        }
+      });
+
+      if (cat === 'all') {
+        renderProducts(products);
+      } else {
+        const filtered = products.filter(p => p.category === cat);
+        renderProducts(filtered);
+      }
+    }
+
+    // ----------------------------------------------------
+    // QUICK VIEW MODAL
+    // ----------------------------------------------------
+    let activeQuickViewProduct = null;
+    function openQuickView(productId) {
+      const p = products.find(x => x.id === productId);
+      if (!p) return;
+      activeQuickViewProduct = p;
+
+      document.getElementById('quickViewImg').src = p.image;
+      document.getElementById('quickViewTitle').innerText = p.title;
+      document.getElementById('quickViewPrice').innerText = formatPrice(p.priceINR);
+      document.getElementById('quickViewDesc').innerText = p.desc;
+      document.getElementById('quickViewFabric').innerText = p.fabric;
+      document.getElementById('quickViewStitches').innerText = p.stitches;
+      document.getElementById('quickViewDimensions').innerText = p.dimensions;
+      document.getElementById('quickViewBadge').innerText = p.tag;
+
+      document.getElementById('quickViewModal').classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    function closeQuickView() {
+      document.getElementById('quickViewModal').classList.add('hidden');
+    }
+
+    function addCurrentQuickViewToCart() {
+      if (activeQuickViewProduct) {
+        addToCartProduct(activeQuickViewProduct.id);
+        closeQuickView();
+      }
+    }
+
+    // ----------------------------------------------------
+    // WIZARD STEP NAVIGATION & CALCULATIONS
+    // ----------------------------------------------------
+    function goToStep(stepNum) {
+      // Hide all steps
+      for (let i = 1; i <= 4; i++) {
+        const stepEl = document.getElementById(`wizardStep${i}`);
+        const indicator = document.getElementById(`stepIndicator${i}`);
+        if (stepEl) stepEl.classList.add('hidden');
+        if (indicator) {
+          indicator.className = "text-center border-b-4 border-linen-300 pb-2";
+          indicator.querySelector('span:first-child').className = "text-xs font-bold text-stone-400 block";
+        }
+      }
+
+      // Show target step
+      const targetStep = document.getElementById(`wizardStep${stepNum}`);
+      if (targetStep) targetStep.classList.remove('hidden');
+
+      const activeIndicator = document.getElementById(`stepIndicator${stepNum}`);
+      if (activeIndicator) {
+        activeIndicator.className = "text-center border-b-4 border-terracotta-500 pb-2";
+        activeIndicator.querySelector('span:first-child').className = "text-xs font-bold text-terracotta-600 block";
+      }
+
+      // If step 4, update summary labels
+      if (stepNum === 4) {
+        document.getElementById('summaryGarment').innerText = wizardState.garment;
+        document.getElementById('summaryPlacement').innerText = wizardState.placement;
+        document.getElementById('summaryTechnique').innerText = wizardState.technique;
+        document.getElementById('summaryMotif').innerText = wizardState.motif;
+        document.getElementById('generatedIntakeId').innerText = wizardState.intakeId;
+      }
+
+      updateWizardPrice();
+      lucide.createIcons();
+    }
+
+    function selectGarment(name, costDiff, details) {
+      wizardState.garment = name;
+      wizardState.garmentCost = costDiff;
+
+      document.querySelectorAll('.garment-card').forEach(c => c.classList.remove('border-terracotta-500', 'bg-linen-100'));
+      if (event && event.currentTarget) {
+        event.currentTarget.classList.add('border-terracotta-500', 'bg-linen-100');
+      }
+      updateWizardPrice();
+    }
+
+    function selectPlacement(name, priceINR, details) {
+      wizardState.placement = name;
+      wizardState.basePlacementPrice = priceINR;
+
+      document.querySelectorAll('.placement-card').forEach(c => c.classList.remove('border-terracotta-500', 'bg-linen-100'));
+      if (event && event.currentTarget) {
+        event.currentTarget.classList.add('border-terracotta-500', 'bg-linen-100');
+      }
+      updateWizardPrice();
+    }
+
+    function selectTechnique(name, surchargeINR) {
+      wizardState.technique = name;
+      wizardState.techniqueSurcharge = surchargeINR;
+      updateWizardPrice();
+    }
+
+    function selectMotif(name, imgUrl) {
+      wizardState.motif = name;
+      wizardState.motifImg = imgUrl;
+
+      document.querySelectorAll('.motif-card').forEach(c => c.classList.remove('border-terracotta-500', 'ring-2', 'ring-terracotta-500'));
+      if (event && event.currentTarget) {
+        event.currentTarget.classList.add('border-terracotta-500', 'ring-2', 'ring-terracotta-500');
+      }
+    }
+
+    function toggleArtMode(mode) {
+      const catalogView = document.getElementById('catalogMotifsView');
+      const uploadView = document.getElementById('uploadArtworkView');
+      const catBtn = document.getElementById('modeCatalogBtn');
+      const upBtn = document.getElementById('modeUploadBtn');
+
+      if (mode === 'catalog') {
+        catalogView.classList.remove('hidden');
+        uploadView.classList.add('hidden');
+        catBtn.className = "text-sm font-bold text-terracotta-600 border-b-2 border-terracotta-500 pb-1";
+        upBtn.className = "text-sm font-semibold text-stone-500 hover:text-stone-900 pb-1";
+      } else {
+        catalogView.classList.add('hidden');
+        uploadView.classList.remove('hidden');
+        upBtn.className = "text-sm font-bold text-terracotta-600 border-b-2 border-terracotta-500 pb-1";
+        catBtn.className = "text-sm font-semibold text-stone-500 hover:text-stone-900 pb-1";
+      }
+    }
+
+    function handleFileUpload(e) {
+      const file = e.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(evt) {
+          document.getElementById('uploadedPreviewImg').src = evt.target.result;
+          document.getElementById('uploadedFileName').innerText = file.name;
+          document.getElementById('uploadedPreviewContainer').classList.remove('hidden');
+          document.getElementById('uploadTitlePrompt').innerText = "Artwork Selected: " + file.name;
+          wizardState.motif = "Custom Upload: " + file.name;
+          wizardState.motifImg = evt.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+
+    function selectShippingMode(mode, costINR) {
+      wizardState.shippingMode = mode;
+      wizardState.shippingCost = costINR;
+      updateWizardPrice();
+    }
+
+    function updateWizardPrice() {
+      // Calculate total: base placement + technique surcharge + garment mod + shipping (free if > 1499)
+      let sub = wizardState.basePlacementPrice + wizardState.techniqueSurcharge + wizardState.garmentCost;
+      let effectiveShipping = sub >= 1499 ? 0 : wizardState.shippingCost;
+      let total = sub + effectiveShipping;
+
+      const formatted = formatPrice(total);
+      if (document.getElementById('wizardPriceEstimate')) {
+        document.getElementById('wizardPriceEstimate').innerText = formatted;
+      }
+      if (document.getElementById('finalServicePrice')) {
+        document.getElementById('finalServicePrice').innerText = formatted;
+      }
+    }
+
+    function printIntakeSlip() {
+      window.print();
+    }
+
+    function addCustomServiceToCart() {
+      let sub = wizardState.basePlacementPrice + wizardState.techniqueSurcharge + wizardState.garmentCost;
+      let effectiveShipping = sub >= 1499 ? 0 : wizardState.shippingCost;
+      let total = sub + effectiveShipping;
+
+      const notes = document.getElementById('customNotesInput').value.trim();
+
+      const customItem = {
+        cartId: 'custom-' + Date.now(),
+        type: 'custom_service',
+        title: `Custom Embroidery on ${wizardState.garment}`,
+        placement: wizardState.placement,
+        technique: wizardState.technique,
+        motif: wizardState.motif,
+        intakeId: wizardState.intakeId,
+        priceINR: total,
+        image: wizardState.motifImg,
+        notes: notes || 'Standard artisan placement instructions'
+      };
+
+      cart.push(customItem);
+      updateCartDrawer();
+      toggleCartDrawer();
+
+      // Regenerate fresh ID for future bookings
+      wizardState.intakeId = 'INTAKE-BE-HAR-' + Math.floor(1000 + Math.random() * 9000);
+    }
+
+    // ----------------------------------------------------
+    // LIVE GARMENT VISUALIZER
+    // ----------------------------------------------------
+    const garmentMockups = {
+      jacket: "https://images.unsplash.com/photo-1576995853123-5a10305d93c0?w=1000&auto=format&fit=crop",
+      kurta: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=1000&auto=format&fit=crop",
+      tote: "https://images.unsplash.com/photo-1544816155-12df9643f363?w=1000&auto=format&fit=crop"
+    };
+
+    const visualizerMotifIcons = {
+      peacock: "🦚",
+      lotus: "🪷",
+      tiger: "🐅",
+      botanical: "🌿"
+    };
+
+    function setVisualizerGarment(type) {
+      document.getElementById('visGarmentImg').src = garmentMockups[type];
+      document.querySelectorAll('.vis-garment-btn').forEach(b => {
+        b.className = "vis-garment-btn p-3 rounded-xl border-2 border-linen-300 hover:border-terracotta-500 bg-white text-xs font-bold text-stone-700 text-center";
+      });
+      document.getElementById(`visBtn-${type}`).className = "vis-garment-btn p-3 rounded-xl border-2 border-terracotta-500 bg-linen-50 text-xs font-bold text-stone-900 text-center";
+    }
+
+    function setVisualizerMotif(motifKey) {
+      document.getElementById('visMotifContent').innerText = visualizerMotifIcons[motifKey];
+    }
+
+    function updateVisualizerScale(val) {
+      document.getElementById('scaleDisplay').innerText = val + '%';
+      document.getElementById('visMotifContent').style.transform = `scale(${val / 100})`;
+    }
+
+    function setVisualizerPosition(pos) {
+      const container = document.getElementById('visMotifContainer');
+      if (pos === 'chest') {
+        container.style.top = '35%';
+        container.style.left = '32%';
+        container.style.transform = 'translate(-50%, -50%)';
+      } else if (pos === 'center') {
+        container.style.top = '50%';
+        container.style.left = '50%';
+        container.style.transform = 'translate(-50%, -50%)';
+      } else if (pos === 'back') {
+        container.style.top = '48%';
+        container.style.left = '50%';
+        container.style.transform = 'translate(-50%, -50%)';
+      }
+    }
+
+    // ----------------------------------------------------
+    // TRACKING LOOKUP LOGIC
+    // ----------------------------------------------------
+    function handleTrackLookup() {
+      const input = document.getElementById('trackingIdInput').value.trim().toUpperCase();
+      const displayId = document.getElementById('trackDisplayId');
+      const statusBadge = document.getElementById('trackStatusBadge');
+      const itemDesc = document.getElementById('trackItemDesc');
+      const estDate = document.getElementById('trackEstDate');
+      const bar = document.getElementById('timelineProgressBar');
+
+      if (!input) {
+        alert("Please enter a valid Order or Intake ID.");
+        return;
+      }
+
+      displayId.innerText = input;
+
+      if (input.includes('ORD')) {
+        statusBadge.innerText = "Dispatched via Express Courier";
+        statusBadge.className = "px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800";
+        itemDesc.innerText = "Ready-to-Ship Artwork • Origin: Gurugram Workshop, Haryana";
+        estDate.innerText = "Oct 07, 2026";
+        bar.style.width = "85%";
+      } else {
+        statusBadge.innerText = "In Production at Haryana Studio";
+        statusBadge.className = "px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-800";
+        itemDesc.innerText = "Client Garment • Precision Needlecraft & Quality Inspection";
+        estDate.innerText = "Oct 12, 2026";
+        bar.style.width = "60%";
+      }
+    }
+
+    // ----------------------------------------------------
+    // CART & CHECKOUT DRAWER
+    // ----------------------------------------------------
+    function toggleCartDrawer() {
+      const drawer = document.getElementById('cartDrawer');
+      const backdrop = document.getElementById('cartDrawerBackdrop');
+      
+      const isOpen = !drawer.classList.contains('translate-x-full');
+      if (isOpen) {
+        drawer.classList.add('translate-x-full');
+        backdrop.classList.add('hidden');
+      } else {
+        drawer.classList.remove('translate-x-full');
+        backdrop.classList.remove('hidden');
+      }
+    }
+
+    function addToCartProduct(productId) {
+      const p = products.find(x => x.id === productId);
+      if (!p) return;
+
+      cart.push({
+        cartId: 'prod-' + p.id + '-' + Date.now(),
+        type: 'product',
+        title: p.title,
+        priceINR: p.priceINR,
+        image: p.image,
+        category: p.category
+      });
+
+      updateCartDrawer();
+      toggleCartDrawer();
+    }
+
+    function removeFromCart(cartId) {
+      cart = cart.filter(item => item.cartId !== cartId);
+      updateCartDrawer();
+    }
+
+    function updateCartDrawer() {
+      const list = document.getElementById('cartItemsList');
+      const countBadge = document.getElementById('cartCountBadge');
+      countBadge.innerText = cart.length;
+
+      if (cart.length === 0) {
+        list.innerHTML = `
+          <div class="text-center py-16 space-y-3">
+            <div class="w-14 h-14 mx-auto rounded-full bg-linen-100 text-stone-400 flex items-center justify-center">
+              <i data-lucide="shopping-bag" class="w-7 h-7"></i>
+            </div>
+            <p class="text-sm font-semibold text-stone-700">Your bag is currently empty.</p>
+            <p class="text-xs text-stone-400 max-w-xs mx-auto">Explore our ready-to-ship artwork or book a bespoke custom embroidery commission.</p>
+          </div>
+        `;
+        document.getElementById('cartSubtotal').innerText = formatPrice(0);
+        document.getElementById('cartTotal').innerText = formatPrice(0);
+        lucide.createIcons();
+        return;
+      }
+
+      list.innerHTML = cart.map(item => `
+        <div class="flex gap-3 bg-linen-50 p-3 rounded-2xl border border-linen-200 relative group">
+          <img src="${item.image}" alt="${item.title}" class="w-20 h-20 rounded-xl object-cover flex-shrink-0" />
+          <div class="flex flex-col justify-between flex-grow">
+            <div>
+              <div class="flex justify-between items-start pr-6">
+                <h4 class="font-serif font-bold text-sm text-stone-900 leading-tight">${item.title}</h4>
+              </div>
+              ${item.type === 'custom_service' ? `
+                <div class="text-[10px] text-terracotta-600 font-mono mt-0.5">
+                  ${item.placement} • ${item.intakeId}
+                </div>
+              ` : `
+                <div class="text-[10px] text-stone-500 uppercase mt-0.5">${item.category}</div>
+              `}
+            </div>
+            <div class="flex justify-between items-center mt-2">
+              <span class="font-mono text-xs font-bold text-stone-900">${formatPrice(item.priceINR)}</span>
+              <button onclick="removeFromCart('${item.cartId}')" class="text-xs text-stone-400 hover:text-red-600 transition">
+                <i data-lucide="trash-2" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+
+      // Calculations
+      const subtotal = cart.reduce((acc, curr) => acc + curr.priceINR, 0);
+      const discountAmount = subtotal * appliedDiscount;
+      const total = subtotal - discountAmount;
+
+      document.getElementById('cartSubtotal').innerText = formatPrice(subtotal);
+      document.getElementById('cartTotal').innerText = formatPrice(total);
+      document.getElementById('checkoutPayableTotal').innerText = formatPrice(total);
+
+      lucide.createIcons();
+    }
+
+    function applyPromoCode() {
+      const code = document.getElementById('promoCodeInput').value.trim().toUpperCase();
+      const notice = document.getElementById('promoNotice');
+      if (code === 'WELCOME10') {
+        appliedDiscount = 0.10;
+        notice.innerText = "✓ 10% Welcome Discount Applied!";
+        notice.classList.remove('hidden');
+        updateCartDrawer();
+      } else {
+        alert("Invalid promo code. Please use WELCOME10.");
+      }
+    }
+
+    function openCheckoutModal() {
+      if (cart.length === 0) {
+        alert("Your cart is empty. Add an item before checking out.");
+        return;
+      }
+      toggleCartDrawer();
+      document.getElementById('checkoutModal').classList.remove('hidden');
+    }
+
+    function closeCheckoutModal() {
+      document.getElementById('checkoutModal').classList.add('hidden');
+    }
+
+    function handleFinalCheckout(e) {
+      e.preventDefault();
+      closeCheckoutModal();
+      
+      const newOrderId = 'BE-ORD-' + Math.floor(1000 + Math.random() * 9000);
+      document.getElementById('successOrderId').innerText = newOrderId;
+      document.getElementById('orderSuccessModal').classList.remove('hidden');
+
+      // Clear cart
+      cart = [];
+      updateCartDrawer();
+    }
+
+    function closeSuccessModal() {
+      document.getElementById('orderSuccessModal').classList.add('hidden');
+    }
+
+    // ----------------------------------------------------
+    // FAQS ACCORDION
+    // ----------------------------------------------------
+    function toggleFaq(num) {
+      const content = document.getElementById(`faqContent${num}`);
+      const icon = document.getElementById(`faqIcon${num}`);
+      const isHidden = content.classList.contains('hidden');
+
+      if (isHidden) {
+        content.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+      } else {
+        content.classList.add('hidden');
+        icon.classList.remove('rotate-180');
+      }
+    }
+
+    function toggleMobileMenu() {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    }
+
+    function handleInquirySubmit(e) {
+      e.preventDefault();
+      alert("Thank you! Master artisan at Balaji Embroidery Haryana will contact you on WhatsApp/Phone shortly.");
+      e.target.reset();
+    }
+
+    function toggleSearchModal() {
+      const query = prompt("Search Balaji Embroidery Catalog (e.g., peacock, zardozi, jacket, saree):");
+      if (query) {
+        const found = products.filter(p => 
+          p.title.toLowerCase().includes(query.toLowerCase()) || 
+          p.desc.toLowerCase().includes(query.toLowerCase()) ||
+          p.category.toLowerCase().includes(query.toLowerCase())
+        );
+        renderProducts(found);
+        window.location.href = "#catalog";
+      }
+    }
+  </script>
+</body>
+</html>
